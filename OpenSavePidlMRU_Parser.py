@@ -1,5 +1,4 @@
-import json
-import xmltodict
+import json, xmltodict
 
 def OpenSavePidlMRU(userprofile):
     data = {"ART0001":{"name":"OpenSavePidlMRU", "isEvent":False, "data":[]}}

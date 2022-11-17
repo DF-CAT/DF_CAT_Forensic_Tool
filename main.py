@@ -1,8 +1,4 @@
-import os
-import re
-import tempfile
-import sys
-import pyuac
+import os, re, tempfile, sys, pyuac
 import OpenSavePidlMRU_Parser
 import Prefetch_Parser
 import Recent_Files_Parser
@@ -54,8 +50,8 @@ def main():
         External_Device_USB_Usage_Parser.External_Device_USB_Usage(userprofile)
         print("External Device USB Usage.json 생성")
         
-        # json_merge_files.merge_files()
-        # print("All Artifacts.json 생성")
+        json_merge_files.merge_files()
+        print("All Artifacts.json 생성")
 
 def resource_path(relative_path):
     try:
@@ -65,9 +61,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 if __name__ == '__main__':
-    # if not pyuac.isUserAdmin():
-    #     pyuac.runAsAdmin()
-    # else:
-    #     main()
-
-    main()
+    if not pyuac.isUserAdmin():
+        pyuac.runAsAdmin()
+    else:
+        main()

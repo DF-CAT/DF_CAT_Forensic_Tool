@@ -1,12 +1,19 @@
-import glob, json
+import glob, json, re
 
 def merge_files():
     data = {"included" : {"artifacts": [], "events": []}}
+    art_len = len(glob.glob(r"*.json"))
     
     for f in glob.glob(r"*.json"):
-        print(f)
+        if re.search("ART", f):
+            num = re.sub(r'[^0-9]', '', f)
+            data["included"]["artifacts"].append("ART"+str(num))
+        else:
+            num = re.sub(r'[^0-9]', '', f)
+            data["included"]["events"].append("E"+str(num))
+        
         with open(f, encoding="utf-8") as infile:
-            data.append(json.load(infile))
+            data.update(json.load(infile))
     
-    with open("All_Artifacts.json",'w', encoding="utf-8") as outfile:
+    with open("Collect_Result_{}.json".format(art_len),'w', encoding="utf-8") as outfile:
         json.dump(data, outfile, ensure_ascii=False, indent=4)

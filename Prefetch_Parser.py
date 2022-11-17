@@ -1,6 +1,4 @@
-import json
-import csv
-import os
+import json, csv, os
 
 def Prefetch(csv_files):
     data = {"ART0010" : {"name" : "Prefetch", "isEvent" : False, "data":[]}}

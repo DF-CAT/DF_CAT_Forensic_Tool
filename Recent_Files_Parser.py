@@ -1,5 +1,4 @@
-import json
-import xmltodict
+import json, xmltodict
 
 def Recent_Files(userprofile):
     data = {"ART0006":{"name":"Recent_Files", "isEvent":False, "data":[]}}

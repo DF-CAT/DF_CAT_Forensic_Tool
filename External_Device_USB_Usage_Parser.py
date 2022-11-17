@@ -1,5 +1,4 @@
-import json
-import xmltodict
+import json, xmltodict
 
 def External_Device_USB_Usage(userprofile):
     data = {"E0006" : {"name" : "External_Device_USB_Usage", "isEvent" : True, "data":[]}}
