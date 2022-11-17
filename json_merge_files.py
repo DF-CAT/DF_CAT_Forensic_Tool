@@ -1,9 +1,10 @@
 import glob, json
 
 def merge_files():
-    data = []
+    data = {"included" : {"artifacts": [], "events": []}}
     
     for f in glob.glob(r"*.json"):
+        print(f)
         with open(f, encoding="utf-8") as infile:
             data.append(json.load(infile))
     

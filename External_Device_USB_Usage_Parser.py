@@ -2,15 +2,14 @@ import json
 import xmltodict
 
 def External_Device_USB_Usage(userprofile):
+    data = {"E0006" : {"name" : "External_Device_USB_Usage", "isEvent" : True, "data":[]}}
+    
     with open("{}\\External_Device_USB_Usage.xml".format(userprofile), encoding='euc-kr') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
 
     xml_file.close()
-
-    data_dict["External Device/USB Usage"] = data_dict.pop("usb_devices_list")
-    data_dict["External Device/USB Usage"]["E0006"] = data_dict["External Device/USB Usage"].pop("item")
     
-    for i, item in enumerate(data_dict["External Device/USB Usage"]["E0006"]):
+    for item in data_dict["usb_devices_list"]["item"]:
         itemd = item.copy()
         
         Ndel = ["description", "device_type", "serial_number", "registry_time_1", "registry_time_2", "driver_description", "instance_id", "capabilities"]
@@ -32,11 +31,11 @@ def External_Device_USB_Usage(userprofile):
         item["인스턴스 ID"] = item.pop("instance_id")
         item["능력 및 용량"] = item.pop("capabilities")
         
-        data_dict["External Device/USB Usage"]["E0006"][i] = item
+        data["E0006"]["data"].append(item)
 
-    json_data = data_dict
+    json_data = data
 
-    with open("External_Device_USB_Usage.json", "w", encoding='utf-8') as json_file: 
+    with open("E0006_External_Device_USB_Usage.json", "w", encoding='utf-8') as json_file: 
         json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
         json_file.close()

@@ -2,15 +2,14 @@ import json
 import xmltodict
 
 def OpenSavePidlMRU(userprofile):
+    data = {"ART0001":{"name":"OpenSavePidlMRU", "isEvent":False, "data":[]}}
+    
     with open(r"{}\OpenSavePidlMRU.xml".format(userprofile), encoding='utf-16') as xml_file: 
-        data_dict = xmltodict.parse(xml_file.read()) 
+        data_dict = xmltodict.parse(xml_file.read())
 
     xml_file.close()
-
-    data_dict["OpenSavePidlMRU"] = data_dict.pop("open_save_files_list")
-    data_dict["OpenSavePidlMRU"]["ART0001"] = data_dict["OpenSavePidlMRU"].pop("item")
     
-    for i, item in enumerate(data_dict["OpenSavePidlMRU"]["ART0001"]):
+    for item in data_dict["open_save_files_list"]["item"]:
         del item['order']
         del item['file_attributes']
         del item['file_owner']
@@ -23,11 +22,11 @@ def OpenSavePidlMRU(userprofile):
         item["생성시간"] = item.pop("file_created_time")
         item["파일크기"] = item.pop("file_size")
         
-        data_dict["OpenSavePidlMRU"]["ART0001"][i] = item
+        data["ART0001"]["data"].append(item)
 
-    json_data = data_dict
+    json_data = data
 
-    with open("OpenSavePidlMRU.json", "w", encoding='utf-8') as json_file: 
+    with open("ART0001_OpenSavePidlMRU.json", "w", encoding='utf-8') as json_file: 
         json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
         json_file.close()
