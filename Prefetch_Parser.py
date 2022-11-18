@@ -38,5 +38,5 @@ def Prefetch(csv_files):
         data["ART0010"]["data"][i] = item
 
     with open(r"ART0010_Prefetch.json", "w", encoding='utf-8') as json_file: 
-        json.dump(data, json_file, indent=4, ensure_ascii=False, sort_keys="True")
+        json.dump(data, json_file, indent=4, ensure_ascii=False)
         json_file.close()
