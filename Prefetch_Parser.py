@@ -1,4 +1,4 @@
-import json, csv, os
+import json, csv, os, re
 
 def Prefetch(csv_files):
     data = {"ART0010" : {"name" : "Prefetch", "isEvent" : False, "data":[]}}
@@ -27,7 +27,8 @@ def Prefetch(csv_files):
         files = []
 
         for file in my_list:
-            files.append(os.path.basename(file))
+            if re.compile(file, re.I).findall(".exe .pdf .hwp .doc .docm .docx .dot .dotx .csv .ppt .pptm .pptx .xlm .xls .xlsm .xlsx .zip .rar .7z"):
+                files.append(os.path.basename(file))
 
         item["FilesLoaded"] = files
 

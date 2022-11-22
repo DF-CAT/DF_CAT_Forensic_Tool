@@ -17,3 +17,5 @@ def merge_files():
     
     with open("Collect_Result_{}.json".format(art_len),'w', encoding="utf-8") as outfile:
         json.dump(data, outfile, ensure_ascii=False, indent=4)
+    
+    return art_len
