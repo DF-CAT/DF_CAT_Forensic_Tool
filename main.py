@@ -18,7 +18,7 @@ def art_main(usb, open_mru, prefetch, recent, lnk):
         download.download(downpath, usb, open_mru, prefetch, recent, lnk)
         
         if open_mru != 0:
-            OpenSaveFilesView = resource_path(r"Forensics_Tool\OpenSaveFilesView")
+            OpenSaveFilesView = downpath+"\OpenSaveFilesView"
 
             os.popen('{} /sxml {}/OpenSavePidlMRU.xml'.format(OpenSaveFilesView, userprofile)).read()
 
@@ -27,7 +27,7 @@ def art_main(usb, open_mru, prefetch, recent, lnk):
         
         if prefetch != 0:
             pf_list = os.listdir("C:\Windows\Prefetch")
-            PECmd = resource_path(r"Forensics_Tool\PECmd.exe")
+            PECmd = downpath+"\PECmd.exe"
 
             for pf in pf_list:
                 if pf.endswith('.pf'):
@@ -47,20 +47,20 @@ def art_main(usb, open_mru, prefetch, recent, lnk):
             print("ART0010_Prefetch.json 생성")
         
         if recent != 0:
-            RecentFilesView = resource_path(r"Forensics_Tool\RecentFilesView.exe")
+            RecentFilesView = downpath+"\RecentFilesView.exe"
             os.popen(r'{} /sxml {}\RecentFiles.xml'.format(RecentFilesView, userprofile)).read()
 
             Recent_Files_Parser.Recent_Files(userprofile)
             print("ART0006_Recent_Files.json 생성")
         
         if usb != 0:
-            USBDeview = resource_path(r"Forensics_Tool\USBDeview.exe")
+            USBDeview = downpath+"\USBDeview.exe"
             os.popen(r'{} /sxml {}\External_Device_USB_Usage.xml'.format(USBDeview, userprofile)).read()
             External_Device_USB_Usage_Parser.External_Device_USB_Usage(userprofile)
             print("E0006_External_Device_USB_Usage.json 생성")
         
         if lnk != 0:
-            lnk = resource_path(r"Forensics_Tool\shman.exe")
+            lnk = downpath+"\shman.exe"
             os.popen(r'{} /sxml {}\Shortcut_LNK_Files.xml'.format(lnk, userprofile)).read()
             LNK_Parser.Shortcut_LNK_Files(userprofile)
             print("ART0022_Shortcut_LNK_Files.json 생성")

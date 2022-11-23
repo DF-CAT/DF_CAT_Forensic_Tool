@@ -2,7 +2,7 @@ from tkinter import *
 import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import messagebox
-import main as art_main
+import main
 import pyuac
 
 root = Tk()
@@ -24,7 +24,7 @@ def Start():
         messagebox.showinfo("DF CAT Tool", "아티팩트를 수집하지 않습니다.")
     else:
         messagebox.showinfo("DF CAT Tool", "아티팩트 수집을 시작합니다.")
-        art_main(usb, open_mru, prefetch, recent, lnk)
+        main.art_main(usb, open_mru, prefetch, recent, lnk)
         messagebox.showinfo("DF CAT Tool", "아티팩트 수집이 완료되었습니다.")
 
 def selectall():
@@ -70,9 +70,9 @@ buttonDeSelectAll = Button(frame_bot, width=10, text="전체취소", overrelief=
 buttonDeSelectAll.grid(column=0, row=8)
 
 if __name__ == '__main__':
-    # if not pyuac.isUserAdmin():
-    #     pyuac.runAsAdmin()
-    # else:
-    #     mainloop()
+    if not pyuac.isUserAdmin():
+        pyuac.runAsAdmin()
+    else:
+        mainloop()
     
-    mainloop()
+    # mainloop()
