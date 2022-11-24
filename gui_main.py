@@ -3,9 +3,16 @@ import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import messagebox
 import main
+import threading
+import os
 import pyuac
 
 root = Tk()
+
+path = os.path.join(os.path.dirname(__file__), "favicon.ico")
+if os.path.isfile(path):
+    root.iconbitmap(path)
+
 root.title("DF CAT Tool")
 root.geometry("300x400")
 root.resizable(width=False, height=False)
@@ -16,6 +23,10 @@ font = tkFont.Font(size=12)
 label = Label(frame_top, text="수집할 아티팩트를 선택해 주세요\n", font=font)
 label.pack(side="top")
 
+def th():
+    th = threading.Thread(target=Start)
+    th.daemon = True
+    th.start()
 
 def Start():
     msg = messagebox.askquestion("DF CAT Tool", "아티팩트를 수집하기 위해 툴을 설치합니다.\n동의하시겠습니까?")
@@ -24,7 +35,7 @@ def Start():
         messagebox.showinfo("DF CAT Tool", "아티팩트를 수집하지 않습니다.")
     else:
         messagebox.showinfo("DF CAT Tool", "아티팩트 수집을 시작합니다.")
-        main.art_main(usb, open_mru, prefetch, recent, lnk)
+        main.art_main(usb.get(), open_mru.get(), prefetch.get(), recent.get(), lnk.get())
         messagebox.showinfo("DF CAT Tool", "아티팩트 수집이 완료되었습니다.")
 
 def selectall():
@@ -62,7 +73,7 @@ bt3.grid(column=0, row=3, sticky=tk.W)
 bt4.grid(column=0, row=4, sticky=tk.W)
 bt5.grid(column=0, row=5, sticky=tk.W)
 
-button = Button(frame_bot, width=10, text="Start", overrelief="solid", command=Start, font=font)
+button = Button(frame_bot, width=10, text="Start", overrelief="solid", command=th, font=font)
 button.grid(column=0, row=6)
 buttonSelectAll = Button(frame_bot, width=10, text="전체선택", overrelief="solid", command=selectall, font=font)
 buttonSelectAll.grid(column=0, row=7)

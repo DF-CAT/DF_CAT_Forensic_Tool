@@ -2,7 +2,7 @@ import json, csv, os, re
 
 def Prefetch(csv_files):
     data = {"ART0010" : {"name" : "Prefetch", "isEvent" : False, "data":[]}}
-    
+    exts = [".exe" ,".pdf" ,".hwp" ,".doc" ,".docm" ,".docx" ,".dot" ,".dotx" ,".csv" ,".ppt" ,".pptm" ,".pptx" ,".xlm" ,".xls" ,".xlsm" ,".xlsx" ,".zip" ,".rar", ".7z"]
     for csv_file in csv_files:
         with open(csv_file, 'rt', encoding="utf-8") as f:
             csvReader = csv.DictReader(f)
@@ -27,9 +27,13 @@ def Prefetch(csv_files):
         files = []
 
         for file in my_list:
-            if re.compile(file, re.I).findall(".exe .pdf .hwp .doc .docm .docx .dot .dotx .csv .ppt .pptm .pptx .xlm .xls .xlsm .xlsx .zip .rar .7z"):
-                files.append(os.path.basename(file))
+            for ext in exts:
+                if re.compile(ext, re.I).findall(file):
+                    files.append(os.path.basename(file))
 
+        if files == []:
+            continue
+        
         item["FilesLoaded"] = files
 
         item["실행확장자"] = item.pop("ExecutableName")
