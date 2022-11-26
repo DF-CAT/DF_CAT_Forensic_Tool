@@ -2,13 +2,16 @@ import json, csv, os, re
 
 def Prefetch(csv_files):
     data = {"ART0010" : {"name" : "Prefetch", "isEvent" : False, "data":[]}}
-    exts = [".exe" ,".pdf" ,".hwp" ,".doc" ,".docm" ,".docx" ,".dot" ,".dotx" ,".csv" ,".ppt" ,".pptm" ,".pptx" ,".xlm" ,".xls" ,".xlsm" ,".xlsx" ,".zip" ,".rar", ".7z"]
+    exts = '''.exe|.pdf|.hwp|.doc|.docm|.docx|.dot|.dotx|.csv|.ppt|.pptm|.pptx|.xlm|.xls|.xlsm|.xlsx|.zip|.rar|.7z'''
     for csv_file in csv_files:
-        with open(csv_file, 'rt', encoding="utf-8") as f:
-            csvReader = csv.DictReader(f)
+        try:
+            with open(csv_file, 'rt', encoding="utf-8") as f:
+                csvReader = csv.DictReader(f)
 
-            for rows in csvReader:
-                data["ART0010"]["data"].append(rows)
+                for rows in csvReader:
+                    data["ART0010"]["data"].append(rows)
+        except:
+            pass
 
     for i, item in enumerate(data["ART0010"]["data"]):
         itemd = item.copy()
@@ -28,7 +31,7 @@ def Prefetch(csv_files):
 
         for file in my_list:
             for ext in exts:
-                if re.compile(ext, re.I).findall(file):
+                if len(re.compile(ext, re.I).findall(file)) != 0:
                     files.append(os.path.basename(file))
 
         if files == []:
