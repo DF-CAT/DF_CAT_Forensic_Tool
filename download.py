@@ -6,7 +6,7 @@ import main
 from urllib.parse import urlparse
 from zipfile import ZipFile
 
-def download(downpath, usb, open_mru, prefetch, recent, lnk):
+def download(downpath, usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downloads, history, jump, last, interfaces, shell_bags, userassist, user_accounts, outlook, bookmarks):
     ver = sys.maxsize > 2**32
 
     if ver:

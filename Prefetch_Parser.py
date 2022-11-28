@@ -13,7 +13,7 @@ def Prefetch(csv_files):
         except:
             pass
 
-    for i, item in enumerate(data["ART0010"]["data"]):
+    for item in data["ART0010"]["data"]:
         itemd = item.copy()
 
         Ndel = ["ExecutableName", "FilesLoaded", "LastRun"]
@@ -30,9 +30,8 @@ def Prefetch(csv_files):
         files = []
 
         for file in my_list:
-            for ext in exts:
-                if len(re.compile(ext, re.I).findall(file)) != 0:
-                    files.append(os.path.basename(file))
+            if len(re.compile(exts, re.I).findall(os.path.basename(file))) != 0:
+                files.append(os.path.basename(file))
 
         if files == []:
             continue
@@ -43,7 +42,7 @@ def Prefetch(csv_files):
         item["접근파일"] = item.pop("FilesLoaded")
         item["최근실행시간"] = item.pop("LastRun")
 
-        data["ART0010"]["data"][i] = item
+        data["ART0010"]["data"].append(item)
 
     with open(r"ART0010_Prefetch.json", "w", encoding='utf-8') as json_file: 
         json.dump(data, json_file, indent=4, ensure_ascii=False)

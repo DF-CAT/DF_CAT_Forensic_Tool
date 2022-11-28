@@ -7,7 +7,7 @@ import json_merge_files
 import LNK_Parser
 import download
 
-def art_main(usb, open_mru, prefetch, recent, lnk):
+def art_main(usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downloads, history, jump, last, interfaces, shell_bags, userassist, user_accounts, outlook, bookmarks):
     userprofile = ""
     sys_pf = '''UPDATE|HOST|AUDIODG|AM_DELTA_PATCH|BITLOCKER|WIZARD|CALCULATOR|CHROME|CMD|SETUP|COMPAT|COMPPKGSRV|CONSENT|CREDENTIALUIBROKER|CSRSS|CTFMON|API|GUI|DLL|DWM|EASEOFACCESSDIALOG|EASYCONNECTMANAGER|SERVICE|EZT|FILE|GAME|GUP|COUNT|LOOK|HELP|MICROSOFT|MMC|MOFCOMP|MONOTIFICATIONUX|MOUSOCOREWORKER|MPC|MSCORSVW|MPSIGSTUB|MPR|VIEW|MSI|MSM|MSPAINTMSTEAMS|NET|NGEN|NOSSTARTER|INSTALLER|CONSOLE|RUNTIMEBROKER|TASK'''
     
@@ -15,7 +15,7 @@ def art_main(usb, open_mru, prefetch, recent, lnk):
         if os.path.exists(tempDir):
             userprofile = resource_path(tempDir)
     
-        download.download(userprofile, usb, open_mru, prefetch, recent, lnk)
+        download.download(userprofile, usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downloads, history, jump, last, interfaces, shell_bags, userassist, user_accounts, outlook, bookmarks)
 
         if open_mru != 0:
             OpenSaveFilesView = userprofile+r"\OpenSaveFilesView.exe"
@@ -26,12 +26,13 @@ def art_main(usb, open_mru, prefetch, recent, lnk):
             print("ART0001_OpenSavePidlMRU.json 생성")
 
         if prefetch != 0:
-            pf_list = os.listdir("C:\Windows\Prefetch")
+            cd = os.popen("cd").read()
+            pf_list = os.listdir("{}:\Windows\prefetch".format(cd.split(":")[0]))
             PECmd = userprofile+r"\PECmd.exe"
 
             for pf in pf_list:
                 if pf.endswith('.pf') and len(re.compile(sys_pf, re.I).findall(pf)) == 0:
-                    path = r"C:\Windows\Prefetch\{}".format(pf)
+                    path = r"{0}:\Windows\prefetch\{1}".format(cd.split(":")[0], pf)
                     os.system(r'{} -f "{}" --csv {}'.format(PECmd, path, userprofile))
 
             file_list = os.listdir(userprofile)
@@ -74,5 +75,3 @@ def resource_path(relative_path):
     except Exception:
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
-
-art_main(0, 0, 0, 0, 1)
