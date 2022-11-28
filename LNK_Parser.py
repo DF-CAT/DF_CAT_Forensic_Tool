@@ -1,30 +1,13 @@
-import json, xmltodict, chardet
-
+import json
 def Shortcut_LNK_Files(userprofile):
     data = {"ART0022":{"name":"Shortcut_LNK_Files", "isEvent":False, "data":[]}}
-
-    rawdata = open(r"{}\Shortcut_LNK_Files.xml".format(userprofile), mode='rb').read()
-    data_d = chardet.detect(rawdata)
-    result = data_d['encoding']
-    data_dict = None
-    with open(r"{}\Shortcut_LNK_Files.xml".format(userprofile), encoding=result) as xml_file:
-        result = xml_file.read()
-        data_dict = xmltodict.parse(result)
     
-    for item in data_dict["shortcuts_list"]["item"]:
-        del item['broken_shortcut']
-        del item['link_to']
-        del item['arguments']
-        del item['start_in']
-        del item['hot_key']
-        del item['location']
-        del item['comment']
+    with open(r"{}\Shortcut_LNK_Files.txt".format(userprofile)) as txt_file:
+        result = txt_file.readlines()
         
-        item["이름"] = item.pop("shortcut_name")
-        item["수정시간"] = item.pop("modified_date")
-        item["경로"] = item.pop("shortcut_filename")
-        
-        data["ART0022"]["data"].append(item)
+        for i in result:
+            re = i.split('\t')
+            data["ART0022"]["data"].append({"이름":re[0], "수정시간":re[9], "경로":re[11]})
 
     json_data = data
 
