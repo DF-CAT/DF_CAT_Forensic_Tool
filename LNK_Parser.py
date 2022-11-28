@@ -1,12 +1,15 @@
-import json, xmltodict
+import json, xmltodict, chardet
 
 def Shortcut_LNK_Files(userprofile):
     data = {"ART0022":{"name":"Shortcut_LNK_Files", "isEvent":False, "data":[]}}
-    
-    with open(r"{}\Shortcut_LNK_Files.xml".format(userprofile), encoding='euc-kr') as xml_file: 
-        data_dict = xmltodict.parse(xml_file.read())
 
-    xml_file.close()
+    rawdata = open(r"{}\Shortcut_LNK_Files.xml".format(userprofile), mode='rb').read()
+    data_d = chardet.detect(rawdata)
+    result = data_d['encoding']
+    data_dict = None
+    with open(r"{}\Shortcut_LNK_Files.xml".format(userprofile), encoding=result) as xml_file:
+        result = xml_file.read()
+        data_dict = xmltodict.parse(result)
     
     for item in data_dict["shortcuts_list"]["item"]:
         del item['broken_shortcut']

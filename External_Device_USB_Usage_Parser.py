@@ -5,8 +5,6 @@ def External_Device_USB_Usage(userprofile):
     
     with open("{}\\External_Device_USB_Usage.xml".format(userprofile), encoding='euc-kr') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
-
-    xml_file.close()
     
     for item in data_dict["usb_devices_list"]["item"]:
         itemd = item.copy()
