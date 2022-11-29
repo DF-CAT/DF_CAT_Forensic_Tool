@@ -8,5 +8,5 @@ This tool uses an open source tool to transform it into a Json file suitable for
 
 ## Licenses
 
-[Nirsoft](https://www.nirsoft.net/) \\n
+[Nirsoft](https://www.nirsoft.net/)  
 [Eric Zimmerman's tools](https://ericzimmerman.github.io/#!index.md)
