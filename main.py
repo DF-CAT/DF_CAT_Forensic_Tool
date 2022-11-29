@@ -1,10 +1,9 @@
 import os, re, tempfile, sys
-import OpenSavePidlMRU_Parser
-import Prefetch_Parser
-import Recent_Files_Parser
-import External_Device_USB_Usage_Parser
+from artifact_parser import OpenSavePidlMRU_Parser, Prefetch_Parser, Recent_Files_Parser, External_Device_USB_Usage_Parser
+from artifact_parser import LNK_Parser, Shimcache_Parser, Recycle_Bin_Parser, Browser_Downloads_Parser
+from artifact_parser import History_and_Download_History_Parser, Jump_List_Parser, Last_Visited_MRU_Parser, Network_Interfaces_Parser
+from artifact_parser import Shell_Bags_Parser, UserAssist_Parser, User_Accounts_Parser, Outlook_Parser, Bookmarks_Parser
 import json_merge_files
-import LNK_Parser
 import download
 
 def art_main(usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downloads, history, jump, last, interfaces, shell_bags, userassist, user_accounts, outlook, bookmarks):
@@ -20,20 +19,20 @@ def art_main(usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downlo
         if open_mru != 0:
             OpenSaveFilesView = userprofile+r"\OpenSaveFilesView.exe"
 
-            os.system('{} /sxml {}/OpenSavePidlMRU.xml'.format(OpenSaveFilesView, userprofile))
+            os.popen('{} /sxml {}/OpenSavePidlMRU.xml'.format(OpenSaveFilesView, userprofile)).read()
 
             OpenSavePidlMRU_Parser.OpenSavePidlMRU(userprofile)
             print("ART0001_OpenSavePidlMRU.json 생성")
 
         if prefetch != 0:
-            cd = os.popen("cd").read()
-            pf_list = os.listdir("{}:\Windows\prefetch".format(cd.split(":")[0]))
+            cd = os.popen("%systemdrive%").read()
+            pf_list = os.listdir("{}\Windows\prefetch".format(cd))
             PECmd = userprofile+r"\PECmd.exe"
 
             for pf in pf_list:
                 if pf.endswith('.pf') and len(re.compile(sys_pf, re.I).findall(pf)) == 0:
-                    path = r"{0}:\Windows\prefetch\{1}".format(cd.split(":")[0], pf)
-                    os.system(r'{} -f "{}" --csv {}'.format(PECmd, path, userprofile))
+                    path = r"{0}\Windows\prefetch\{1}".format(cd, pf)
+                    os.popen(r'{} -f "{}" --csv {}'.format(PECmd, path, userprofile)).read()
 
             file_list = os.listdir(userprofile)
             file_list_py = [file for file in file_list if file.endswith(".csv")]
@@ -45,26 +44,92 @@ def art_main(usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downlo
                     path.append(userprofile + "/" + csv)
 
             Prefetch_Parser.Prefetch(path)
-            print("ART0010_Prefetch.json 생성")
+            print("ART0009_Prefetch.json 생성")
 
         if recent != 0:
             RecentFilesView = userprofile+r"\RecentFilesView.exe"
-            os.system(r'{} /sxml {}\RecentFiles.xml'.format(RecentFilesView, userprofile))
+            os.popen(r'{} /sxml {}\RecentFiles.xml'.format(RecentFilesView, userprofile)).read()
 
             Recent_Files_Parser.Recent_Files(userprofile)
             print("ART0006_Recent_Files.json 생성")
 
         if usb != 0:
             USBDeview = userprofile+r"\USBDeview.exe"
-            os.system(r'{} /sxml {}\External_Device_USB_Usage.xml'.format(USBDeview, userprofile))
+            os.popen(r'{} /sxml {}\External_Device_USB_Usage.xml'.format(USBDeview, userprofile)).read()
             External_Device_USB_Usage_Parser.External_Device_USB_Usage(userprofile)
             print("E0006_External_Device_USB_Usage.json 생성")
 
         if lnk != 0:
-            lnk = userprofile+r"\shman"
-            os.system(r'{} /stab {}\Shortcut_LNK_Files.txt'.format(lnk, userprofile))
+            lnk_path = userprofile+r"\shman"
+            os.popen(r'{} /stab {}\Shortcut_LNK_Files.txt'.format(lnk_path, userprofile)).read()
             LNK_Parser.Shortcut_LNK_Files(userprofile)
             print("ART0022_Shortcut_LNK_Files.json 생성")
+        
+        if shim != 0:
+            shim_path = userprofile+r"\AppCompatCacheParser.exe"
+            os.popen(r'{} --csv {} --csvf Shimcache.csv'.format(shim_path, userprofile)).read()
+            Shimcache_Parser.Shimcache(userprofile)
+            print("ART0010_ShimCache.json 생성")
+        
+        if recycle != 0:
+            recycle_path = userprofile+r"\RBCmd.exe"
+            os.popen(r'{} -d %systemdrive%\$Recycle.Bin --csv {} --csvf Recycle_Bin.csv'.format(recycle_path, userprofile)).read()
+            Recycle_Bin_Parser.Recycle_Bin(userprofile)
+            print("ART0033_Recycle_Bin.json 생성")
+        
+        if browser_downloads != 0:
+            browser_downloads_path = userprofile+r"\BrowserDownloadsView"
+            os.popen(r'{} /sjson {}\Browser_Downloads.json'.format(browser_downloads_path, userprofile)).read()
+            Browser_Downloads_Parser.Browser_Downloads(userprofile)
+        
+        if history != 0:
+            history_path = userprofile+r"\BrowsingHistoryView"
+            os.popen(r'{} /scomma {}\History_and_Download_History.csv'.format(history_path, userprofile)).read()
+            History_and_Download_History_Parser.History_and_Download_History(userprofile)
+        
+        if jump != 0:
+            jump_path = userprofile+r"\JumpListsView"
+            os.popen(r'{} /sxml {}\Jump_Lists.xml'.format(jump_path, userprofile)).read()
+            Jump_List_Parser.Jump_Lists(userprofile)
+            print("ART0008_Jump_Lists.json 생성")
+        
+        if last != 0:
+            last_path = userprofile+r"\LastActivityView"
+            os.popen(r'{} /sxml {}\Last_Visited_MRU.xml'.format(last_path, userprofile)).read()
+            Last_Visited_MRU_Parser.Last_Visited_MRU(userprofile)
+            print("ART0007_Last_Visited_MRU.json 생성")
+        
+        if interfaces != 0:
+            interfaces_path = userprofile+r"\NetworkInterfacesView"
+            os.popen(r'{} /sxml {}\Network_Interfaces.xml'.format(interfaces_path, userprofile)).read()
+            Network_Interfaces_Parser.Network_Interfaces(userprofile)
+        
+        if shell_bags != 0:
+            shell_bags_path = userprofile+r"\ShellBagsView"
+            os.popen(r'{} /sxml {}\Shell_Bags.xml'.format(shell_bags_path, userprofile)).read()
+            Shell_Bags_Parser.Shell_Bags(userprofile)
+            print("ART0006_Shell_Bags.json 생성")
+        
+        if userassist != 0:
+            userassist_path = userprofile+r"\UserAssistView"
+            os.popen(r'{} /sxml {}\UserAssist.xml'.format(userassist_path, userprofile)).read()
+            UserAssist_Parser.UserAssist(userprofile)
+            print("ART0011_UserAssist.json 생성")
+        
+        if user_accounts != 0:
+            user_accounts_path = userprofile+r"\UserProfilesView"
+            os.popen(r'{} /sxml {}\User_Accounts.xml'.format(user_accounts_path, userprofile)).read()
+            User_Accounts_Parser.User_Accounts(userprofile)
+        
+        if outlook != 0:
+            outlook_path = userprofile+r"\OutlookAttachView"
+            os.popen(r'{} /sxml {}\Outlook.xml'.format(outlook_path, userprofile)).read()
+            Outlook_Parser.Outlook(userprofile)
+        
+        if bookmarks != 0:
+            bookmarks_path = userprofile+r"\WebBrowserBookmarksView"
+            os.popen(r'{} /sjson {}\Bookmarks.json'.format(bookmarks_path, userprofile)).read()
+            Bookmarks_Parser.Bookmarks(userprofile)
 
         art_len = json_merge_files.merge_files()
         print("Collect_Result_{}.json 생성".format(art_len))
