@@ -19,9 +19,9 @@ def Jump_Lists(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        item["이름"] = item.pop("filename")
-        item["경로"] = item.pop("full_path")
-        item["사용 시간"] = item.pop("accessed_time")
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
         data["ART0008"]["data"].append(item)
 

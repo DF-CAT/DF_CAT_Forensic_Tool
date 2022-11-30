@@ -39,9 +39,9 @@ def Prefetch(csv_files):
         
         item["FilesLoaded"] = files
 
-        item["실행확장자"] = item.pop("ExecutableName")
-        item["접근파일"] = item.pop("FilesLoaded")
-        item["최근실행시간"] = item.pop("LastRun")
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
 
         data["ART0009"]["data"].append(item)
 

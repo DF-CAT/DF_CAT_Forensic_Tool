@@ -19,8 +19,9 @@ def Shell_Bags(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        item["경로"] = item.pop("path")
-        item["수정 시간"] = item.pop("last_modified_time")
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
         data["ART0006"]["data"].append(item)
 

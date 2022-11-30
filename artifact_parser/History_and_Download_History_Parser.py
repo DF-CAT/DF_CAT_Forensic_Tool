@@ -1,7 +1,7 @@
 import json, csv
 
 def History_and_Download_History(userprofile):
-    data = {"ART_Non2" : {"name" : "History_and_Download_History", "isEvent" : False, "data":[]}}
+    data = {"ART0030" : {"name" : "Web_History", "isEvent" : False, "data":[]}}
     csv_data = []
     with open("{}\\History_and_Download_History.csv".format(userprofile), 'rt', encoding="euc-kr") as f:
         data_dict = csv.DictReader(f)
@@ -22,13 +22,15 @@ def History_and_Download_History(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        item["방문 시간"] = item.pop("Visit Time")
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
-        data["ART_Non2"]["data"].append(item)
+        data["ART0030"]["data"].append(item)
 
     json_data = data
 
-    with open("ART_Non2_History_and_Download_History.json", "w", encoding='utf-8') as json_file: 
+    with open("ART0030_Web_History.json", "w", encoding='utf-8') as json_file: 
         json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
         json_file.close()

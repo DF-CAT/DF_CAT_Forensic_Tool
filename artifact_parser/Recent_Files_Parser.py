@@ -9,15 +9,21 @@ def Recent_Files(userprofile):
     xml_file.close()
     
     for item in data_dict["last_opened_files"]["item"]:
-        del item['missing_file']
-        del item['stored_in']
+        itemd = item.copy()
         
-        item["파일경로"] = item.pop("filename")
-        item["확장자"] = item.pop("extension")
-        item["수정시간"] = item.pop("modified_time")
-        item["생성시간"] = item.pop("created_time")
-        item["실행시간"] = item.pop("execute_time")
-        item["파일명"] = item.pop("file_only")
+        Ndel = ["filename", "extension", "modified_time", "created_time", "execute_time", "file_only"]
+        
+        for key in itemd.keys():
+            num = 0
+            for n in Ndel:
+                if key != n:
+                    num += 1
+                if num == len(Ndel):
+                    del item[key]
+        
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
         data["ART0006"]["data"].append(item)
 

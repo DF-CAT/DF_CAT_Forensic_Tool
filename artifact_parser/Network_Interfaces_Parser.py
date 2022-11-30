@@ -19,11 +19,9 @@ def Network_Interfaces(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        item["이름"] = item.pop("device_name")
-        item["연결 정보"] = item.pop("connection_name")
-        item["IP"] = item.pop("ip_address")
-        item["서브넷 마스크"] = item.pop("subnet_mask")
-        item["연결 시간"] = item.pop("registry_time")
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
         data["ART_Non3"]["data"].append(item)
 

@@ -8,7 +8,7 @@ def Shortcut_LNK_Files(userprofile):
         
         for i in result:
             re = i.split('\t')
-            data["ART0022"]["data"].append({"이름":re[0], "수정시간":re[9], "경로":re[11]})
+            data["ART0022"]["data"].append({"File_name":re[0], "file_modified_time":re[9], "Path":re[11]})
 
     json_data = data
 

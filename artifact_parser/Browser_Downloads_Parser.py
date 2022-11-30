@@ -20,8 +20,11 @@ def Browser_Downloads(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        data["ART_Non1"]["data"].append({"이름" : item["Filename"], "Download URL" : item["Download URL 1"], "Start Time" : item["Start Time"], 
-                                        "End Time" : item["End Time"], "크기" : item["Download Size"], "경로" : item["Full Path Filename"]})
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
+        
+        data["ART_Non1"]["data"].append(item)
     
     with open("ART_Non1_Browser_Downloads.json",'w', encoding="utf-8") as outfile:
         json.dump(data, outfile, ensure_ascii=False, indent=4)

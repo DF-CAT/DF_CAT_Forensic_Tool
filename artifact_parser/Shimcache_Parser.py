@@ -21,8 +21,12 @@ def Shimcache(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
+        
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
 
-        data["ART0010"]["data"].append({"이름" : os.path.basename(item["Path"]), "경로" : item["Path"], "수정시간" : item["LastModifiedTimeUTC"]})
+        data["ART0010"]["data"].append(item)
 
     with open(r"ART0010_ShimCache.json", "w", encoding='utf-8') as json_file: 
         json.dump(data, json_file, indent=4, ensure_ascii=False)

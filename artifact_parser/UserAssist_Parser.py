@@ -7,8 +7,23 @@ def UserAssist(userprofile):
         data_dict = xmltodict.parse(xml_file.read())
     
     for item in data_dict["userassist_items_list"]["item"]:
+        itemd = item.copy()
         
-        data["ART0011"]["data"].append({"이름" : os.path.basename(item["item_name"]), "경로" : item["item_name"], "수정 시간" : item["modified_time"]})
+        Ndel = ["item_name", "modified_time"]
+        
+        for key in itemd.keys():
+            num = 0
+            for n in Ndel:
+                if key != n:
+                    num += 1
+                if num == len(Ndel):
+                    del item[key]
+        
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
+        
+        data["ART0011"]["data"].append(item)
 
     json_data = data
 

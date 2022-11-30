@@ -21,8 +21,12 @@ def Recycle_Bin(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-
-        data["ART0033"]["data"].append({"이름" : os.path.basename(item["FileName"]), "경로" : item["FileName"], "삭제시간" : item["DeletedOn"]})
+        
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
+        
+        data["ART0033"]["data"].append(item)
 
     with open(r"ART0033_Recycle_Bin.json", "w", encoding='utf-8') as json_file: 
         json.dump(data, json_file, indent=4, ensure_ascii=False)

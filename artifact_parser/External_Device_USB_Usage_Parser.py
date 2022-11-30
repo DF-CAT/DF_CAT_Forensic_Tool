@@ -19,14 +19,9 @@ def External_Device_USB_Usage(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        item["장치 설명"] = item.pop("description")
-        item["장치 종류"] = item.pop("device_type")
-        item["장치 등록번호"] = item.pop("serial_number")
-        item["생성날짜"] = item.pop("registry_time_1")
-        item["최근 연결날짜"] = item.pop("registry_time_2")
-        item["드라이버 설명"] = item.pop("driver_description")
-        item["인스턴스 ID"] = item.pop("instance_id")
-        item["능력 및 용량"] = item.pop("capabilities")
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
         data["E0006"]["data"].append(item)
 

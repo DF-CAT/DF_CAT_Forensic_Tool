@@ -7,17 +7,21 @@ def OpenSavePidlMRU(userprofile):
         data_dict = xmltodict.parse(xml_file.read())
     
     for item in data_dict["open_save_files_list"]["item"]:
-        del item['order']
-        del item['file_attributes']
-        del item['file_owner']
-        del item['filename_only']
+        itemd = item.copy()
         
-        item["이름"] = item.pop("filename")
-        item["확장자"] = item.pop("extension")
-        item["실행시간"] = item.pop("open_time")
-        item["수정시간"] = item.pop("file_modified_time")
-        item["생성시간"] = item.pop("file_created_time")
-        item["파일크기"] = item.pop("file_size")
+        Ndel = ["filename", "extension", "open_time", "file_modified_time", "file_created_time", "file_size"]
+        
+        for key in itemd.keys():
+            num = 0
+            for n in Ndel:
+                if key != n:
+                    num += 1
+                if num == len(Ndel):
+                    del item[key]
+        
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
         data["ART0001"]["data"].append(item)
 

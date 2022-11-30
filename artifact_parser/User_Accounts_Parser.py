@@ -18,11 +18,9 @@ def User_Accounts(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        item["user_name"] = item.pop("user_name")
-        item["profile_path"] = item.pop("profile_path")
-        item["폴더 생성 시간"] = item.pop("folder_created_time")
-        item["폴더 수정 시간"] = item.pop("registry_modified_time")
-        item["로그인 시간"] = item.pop("logon_time")
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
         
         data["ART_Non4"]["data"].append(item)
 

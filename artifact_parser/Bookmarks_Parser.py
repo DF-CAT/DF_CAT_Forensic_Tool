@@ -20,8 +20,11 @@ def Bookmarks(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        data["ART_Non6"]["data"].append({"이름" : item["Title"], "URL" : item["URL"], "북마크 경로" : item["Folder Path"], 
-                                        "생성 시간" : item["Created Time"], "Web Browser" : item["Web Browser"]})
+        for n in Ndel:
+            if item[n] == None:
+                del item[n]
+        
+        data["ART_Non6"]["data"].append(item)
     
     with open("ART_Non6_Bookmarks.json",'w', encoding="utf-8") as outfile:
         json.dump(data, outfile, ensure_ascii=False, indent=4)
