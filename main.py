@@ -30,7 +30,7 @@ def art_main(usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downlo
             PECmd = userprofile+r"\PECmd.exe"
 
             for pf in pf_list:
-                if pf.endswith('.pf') and len(re.compile(sys_pf, re.I).findall(pf)) == 0:
+                if pf.endswith('.pf') and re.search(sys_pf, str(pf), re.I) == None:
                     path = r"{0}\Windows\prefetch\{1}".format(cd, pf)
                     os.popen(r'{} -f "{}" --csv {}'.format(PECmd, path, userprofile)).read()
 

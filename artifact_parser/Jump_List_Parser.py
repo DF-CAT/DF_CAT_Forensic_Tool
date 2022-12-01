@@ -19,10 +19,6 @@ def Jump_Lists(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART0008"]["data"].append(item)
 
     json_data = data

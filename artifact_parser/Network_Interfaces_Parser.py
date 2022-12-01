@@ -19,10 +19,6 @@ def Network_Interfaces(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART_Non3"]["data"].append(item)
 
     json_data = data

@@ -7,6 +7,9 @@ def UserAssist(userprofile):
         data_dict = xmltodict.parse(xml_file.read())
     
     for item in data_dict["userassist_items_list"]["item"]:
+        if item["modified_time"] == None:
+            continue
+        
         itemd = item.copy()
         
         Ndel = ["item_name", "modified_time"]
@@ -18,10 +21,6 @@ def UserAssist(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-        
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
         
         data["ART0011"]["data"].append(item)
 

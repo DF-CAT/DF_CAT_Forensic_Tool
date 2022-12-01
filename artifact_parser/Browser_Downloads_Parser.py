@@ -20,10 +20,6 @@ def Browser_Downloads(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART_Non1"]["data"].append(item)
     
     with open("ART_Non1_Browser_Downloads.json",'w', encoding="utf-8") as outfile:

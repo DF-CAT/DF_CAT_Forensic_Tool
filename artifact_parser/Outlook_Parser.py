@@ -18,10 +18,6 @@ def Outlook(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART0003"]["data"].append(item)
 
     json_data = data

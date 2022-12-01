@@ -7,6 +7,9 @@ def OpenSavePidlMRU(userprofile):
         data_dict = xmltodict.parse(xml_file.read())
     
     for item in data_dict["open_save_files_list"]["item"]:
+        if item["filename"] == None:
+            continue
+        
         itemd = item.copy()
         
         Ndel = ["filename", "extension", "open_time", "file_modified_time", "file_created_time", "file_size"]
@@ -18,10 +21,6 @@ def OpenSavePidlMRU(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-        
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
         
         data["ART0001"]["data"].append(item)
 

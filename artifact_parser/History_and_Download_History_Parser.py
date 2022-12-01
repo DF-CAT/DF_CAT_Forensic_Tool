@@ -1,4 +1,4 @@
-import json, csv
+import json, csv, re
 
 def History_and_Download_History(userprofile):
     data = {"ART0030" : {"name" : "Web_History", "isEvent" : False, "data":[]}}
@@ -10,6 +10,12 @@ def History_and_Download_History(userprofile):
                     csv_data.append(rows)
     
     for item in csv_data:
+        if item["URL"] == None:
+            continue
+        
+        if re.search("[http?s|file|^about[:].]", str(item["URL"]), re.I) == None:
+            continue
+        
         itemd = item.copy()
         
         Ndel = ["URL", "Visit Time"]
@@ -21,10 +27,6 @@ def History_and_Download_History(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-        
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
         
         data["ART0030"]["data"].append(item)
 

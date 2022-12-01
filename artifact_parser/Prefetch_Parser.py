@@ -3,7 +3,7 @@ import json, csv, os, re
 def Prefetch(csv_files):
     csv_data = []
     data = {"ART0009" : {"name" : "Prefetch", "isEvent" : False, "data":[]}}
-    exts = '''.exe|.pdf|.hwp|.doc|.docm|.docx|.dot|.dotx|.csv|.ppt|.pptm|.pptx|.xlm|.xls|.xlsm|.xlsx|.zip|.rar|.7z'''
+    exts = '''[.]exe|[.]pdf|[.]hwp|[.]doc|[.]docm|[.]docx|[.]dot|[.]dotx|[.]csv|[.]ppt|[.]pptm|[.]pptx|[.]xlm|[.]xls|[.]xlsm|[.]xlsx|[.]zip|[.]rar|[.]7z|[.]txt'''
     for csv_file in csv_files:
         try:
             with open(csv_file, 'rt', encoding="utf-8") as f:
@@ -31,17 +31,13 @@ def Prefetch(csv_files):
         files = []
 
         for file in my_list:
-            if len(re.compile(exts, re.I).findall(os.path.basename(file))) != 0:
+            if re.search(exts, str(os.path.basename(file)), re.I) != None:
                 files.append(os.path.basename(file))
 
         if files == []:
             continue
         
         item["FilesLoaded"] = files
-
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
 
         data["ART0009"]["data"].append(item)
 

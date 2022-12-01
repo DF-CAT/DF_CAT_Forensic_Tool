@@ -19,10 +19,6 @@ def Shell_Bags(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART0006"]["data"].append(item)
 
     json_data = data

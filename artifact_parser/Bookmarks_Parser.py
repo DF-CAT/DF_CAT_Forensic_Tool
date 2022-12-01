@@ -20,10 +20,6 @@ def Bookmarks(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART_Non6"]["data"].append(item)
     
     with open("ART_Non6_Bookmarks.json",'w', encoding="utf-8") as outfile:

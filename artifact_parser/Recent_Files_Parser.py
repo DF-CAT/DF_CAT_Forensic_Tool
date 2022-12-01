@@ -9,6 +9,9 @@ def Recent_Files(userprofile):
     xml_file.close()
     
     for item in data_dict["last_opened_files"]["item"]:
+        if item["filename"] == None:
+            continue
+        
         itemd = item.copy()
         
         Ndel = ["filename", "extension", "modified_time", "created_time", "execute_time", "file_only"]
@@ -20,10 +23,6 @@ def Recent_Files(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-        
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
         
         data["ART0006"]["data"].append(item)
 

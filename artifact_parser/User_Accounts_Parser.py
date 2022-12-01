@@ -18,10 +18,6 @@ def User_Accounts(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART_Non4"]["data"].append(item)
 
     json_data = data

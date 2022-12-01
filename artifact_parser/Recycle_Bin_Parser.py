@@ -22,10 +22,6 @@ def Recycle_Bin(userprofile):
                 if num == len(Ndel):
                     del item[key]
         
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
-        
         data["ART0033"]["data"].append(item)
 
     with open(r"ART0033_Recycle_Bin.json", "w", encoding='utf-8') as json_file: 

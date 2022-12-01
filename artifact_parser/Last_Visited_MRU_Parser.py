@@ -7,6 +7,9 @@ def Last_Visited_MRU(userprofile):
         data_dict = xmltodict.parse(xml_file.read())
     
     for item in data_dict["user_actions_and_events_list"]["item"]:
+        if item["filename"] == None:
+            continue
+        
         itemd = item.copy()
         
         Ndel = ["filename", "full_path", "action_time"]
@@ -18,10 +21,6 @@ def Last_Visited_MRU(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-        
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
         
         data["ART0007"]["data"].append(item)
 

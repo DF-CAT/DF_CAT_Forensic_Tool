@@ -21,10 +21,6 @@ def Shimcache(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-        
-        for n in Ndel:
-            if item[n] == None:
-                del item[n]
 
         data["ART0010"]["data"].append(item)
 
