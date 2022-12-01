@@ -13,7 +13,7 @@ def History_and_Download_History(userprofile):
         if item["URL"] == None:
             continue
         
-        if re.search("[http?s|file|^about[:].]", str(item["URL"]), re.I) == None:
+        if re.search("http?s|file", str(item["URL"]), re.I) == None:
             continue
         
         itemd = item.copy()
