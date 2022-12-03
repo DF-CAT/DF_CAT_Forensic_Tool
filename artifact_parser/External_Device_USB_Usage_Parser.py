@@ -23,6 +23,9 @@ def External_Device_USB_Usage(userprofile):
                 if num == len(Ndel):
                     del item[key]
 
+        item['created_time'] = item.pop('registry_time_1')
+        item['last_plug_unplug_time'] = item.pop('registry_time_2')
+
         data["E0006"]["data"].append(item)
 
     json_data = data
