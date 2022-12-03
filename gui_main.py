@@ -15,9 +15,11 @@ if os.path.isfile(path):
     root.iconbitmap(path)
 
 root.title("DF CAT Tool")
-root.geometry("700x400")
+root.geometry("700x380")
 root.resizable(width=False, height=False)
 
+paddingTop = Frame(root, height=20, width=700)
+paddingTop.pack(side="top", fill="both", expand=True)
 frame_top = tk.Frame(root)
 frame_top.pack(side="top")
 font = tkFont.Font(size=12)
@@ -151,6 +153,8 @@ buttonSelectAll = Button(frame_bot, width=10, text="전체선택", overrelief="s
 buttonSelectAll.grid(column=1, row=9, sticky=tk.W)
 buttonDeSelectAll = Button(frame_bot, width=10, text="전체취소", overrelief="solid", command=deselectall, font=font)
 buttonDeSelectAll.grid(column=1, row=10, sticky=tk.W)
+paddingBottom = tk.Frame(root, height=30)
+paddingBottom.pack(side="bottom", fill="x", expand=True)
 
 if __name__ == '__main__':
     if not pyuac.isUserAdmin():
