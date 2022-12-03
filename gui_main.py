@@ -1,11 +1,13 @@
-from tkinter import *
+import os
+import threading
 import tkinter as tk
 import tkinter.font as tkFont
+from tkinter import *
 from tkinter import messagebox
-import main
-import threading
-import os
+
 import pyuac
+
+import main
 
 root = Tk()
 
@@ -23,22 +25,27 @@ font = tkFont.Font(size=12)
 label = Label(frame_top, text="수집할 아티팩트를 선택해 주세요\n", font=font)
 label.pack(side="top")
 
+
 def th():
     start_th = threading.Thread(target=Start)
     start_th.daemon = True
     start_th.start()
 
+
 def Start():
     msg = messagebox.askquestion("DF CAT Tool", "아티팩트를 수집하기 위해 툴을 설치합니다.\n동의하시겠습니까?")
-    
+
     if msg == "no":
         messagebox.showinfo("DF CAT Tool", "아티팩트를 수집하지 않습니다.")
     else:
         messagebox.showinfo("DF CAT Tool", "아티팩트 수집을 시작합니다.")
         button.configure(state="disabled")
-        main.art_main(usb.get(), open_mru.get(), prefetch.get(), recent.get(), lnk.get(), shim.get(), recycle.get(), browser_downloads.get(), history.get(), jump.get(), last.get(), interfaces.get(), shell_bags.get(), userassist.get(), user_accounts.get(), outlook.get(), bookmarks.get())
+        main.art_main(usb.get(), open_mru.get(), prefetch.get(), recent.get(), lnk.get(), shim.get(), recycle.get(),
+                      browser_downloads.get(), history.get(), jump.get(), last.get(), interfaces.get(),
+                      shell_bags.get(), userassist.get(), user_accounts.get(), outlook.get(), bookmarks.get())
         messagebox.showinfo("DF CAT Tool", "아티팩트 수집이 완료되었습니다.")
         button.configure(state="normal")
+
 
 def selectall():
     bt1.select()
@@ -59,6 +66,7 @@ def selectall():
     bt16.select()
     bt17.select()
 
+
 def deselectall():
     bt1.deselect()
     bt2.deselect()
@@ -77,6 +85,7 @@ def deselectall():
     bt15.deselect()
     bt16.deselect()
     bt17.deselect()
+
 
 usb = IntVar()
 open_mru = IntVar()
@@ -147,5 +156,5 @@ if __name__ == '__main__':
         pyuac.runAsAdmin()
     else:
         mainloop()
-    
+
     # mainloop()
