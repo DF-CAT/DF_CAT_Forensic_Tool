@@ -27,7 +27,10 @@ def External_Device_USB_Usage(userprofile):
             item['created_time'] = item.pop('registry_time_1')
             item['last_plug_unplug_time'] = item.pop('registry_time_2')
 
-            data["E0006"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["E0006"]["data"].append(item)
+                    break
 
         json_data = data
 

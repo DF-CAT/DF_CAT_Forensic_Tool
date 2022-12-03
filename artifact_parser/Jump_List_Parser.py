@@ -27,7 +27,10 @@ def Jump_Lists(userprofile):
             item['path'] = item.pop('full_path')
             item['accessed_time'] = item.pop('accessed_time')
 
-            data["ART0008"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0008"]["data"].append(item)
+                    break
 
         json_data = data
 

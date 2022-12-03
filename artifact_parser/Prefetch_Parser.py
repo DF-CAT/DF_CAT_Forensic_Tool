@@ -42,13 +42,14 @@ def Prefetch(csv_files):
         if not files:
             continue
 
-        item["FilesLoaded"] = files
-
         item['name'] = item.pop('ExecutableName')
         item['executed_time'] = item.pop('LastRun')
-        item['loaded_files'] = item.pop('FilesLoaded')
+        item["loaded_files"] = files
 
-        data["ART0009"]["data"].append(item)
+        for key in item:
+            if item[key] is not None:
+                data["ART0009"]["data"].append(item)
+                break
 
     with open(r"ART0009_Prefetch.json", "w", encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)

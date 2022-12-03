@@ -35,7 +35,10 @@ def History_and_Download_History(userprofile):
             item['url'] = item.pop('URL')
             item['visited_time'] = item.pop('Visit Time')
 
-            data["ART0030"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0030"]["data"].append(item)
+                    break
 
         json_data = data
 

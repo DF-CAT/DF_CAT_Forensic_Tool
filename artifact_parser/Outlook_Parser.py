@@ -22,14 +22,17 @@ def Outlook(userprofile):
                     if num == len(Ndel):
                         del item[key]
 
-            data["ART0003"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    item['name'] = item.pop('filename')
+                    item['from_email'] = item.pop('from_email')
+                    item['to_email'] = item.pop('to_email')
+                    item['message_delivery_time'] = item.pop('message_delivery_time')
+                    item['size'] = item.pop('file_size')
+                    item['domain'] = item.pop('domain')
 
-            item['name'] = item.pop('filename')
-            item['from_email'] = item.pop('from_email')
-            item['to_email'] = item.pop('to_email')
-            item['message_delivery_time'] = item.pop('message_delivery_time')
-            item['size'] = item.pop('file_size')
-            item['domain'] = item.pop('domain')
+                    data["ART0003"]["data"].append(item)
+                    break
 
         json_data = data
 

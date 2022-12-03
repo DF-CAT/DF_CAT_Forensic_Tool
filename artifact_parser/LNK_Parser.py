@@ -10,7 +10,10 @@ def Shortcut_LNK_Files(userprofile):
 
             for i in result:
                 re = i.split('\t')
-                data["ART0022"]["data"].append({"name": re[0], "modified_time": re[9], "path": re[11]})
+                for key in re:
+                    if key is not None:
+                        data["ART0022"]["data"].append({"name": re[0], "modified_time": re[9], "path": re[11]})
+                        break
 
         json_data = data
 

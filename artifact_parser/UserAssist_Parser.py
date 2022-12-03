@@ -29,7 +29,10 @@ def UserAssist(userprofile):
             item['name'] = item.pop('item_name')
             item['modified_time'] = item.pop('modified_time')
 
-            data["ART0011"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0011"]["data"].append(item)
+                    break
 
         json_data = data
 

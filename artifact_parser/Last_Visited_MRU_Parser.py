@@ -30,7 +30,10 @@ def Last_Visited_MRU(userprofile):
             item['path'] = item.pop('full_path')
             item['action_time'] = item.pop('action_time')
 
-            data["ART0007"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0007"]["data"].append(item)
+                    break
 
         json_data = data
 

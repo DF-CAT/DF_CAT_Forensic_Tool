@@ -26,7 +26,10 @@ def Shell_Bags(userprofile):
             item['path'] = item.pop('path')
             item['modified_time'] = item.pop('last_modified_time')
 
-            data["ART0006"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0006"]["data"].append(item)
+                    break
 
         json_data = data
 

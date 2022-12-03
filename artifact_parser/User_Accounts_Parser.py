@@ -4,7 +4,7 @@ import xmltodict
 
 
 def User_Accounts(userprofile):
-    data = {"ART_Non4": {"name": "User_Accounts", "isEvent": False, "data": []}}
+    data = {"ART0004": {"name": "User_Accounts", "isEvent": False, "data": []}}
 
     try:
         with open("{}\\User_Accounts.xml".format(userprofile), encoding='utf-16') as xml_file:
@@ -22,11 +22,14 @@ def User_Accounts(userprofile):
                     if num == len(Ndel):
                         del item[key]
 
-            data["ART_Non4"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0004"]["data"].append(item)
+                    break
 
         json_data = data
 
-        with open("ART_Non4_User_Accounts.json", "w", encoding='utf-8') as json_file:
+        with open("ART0004_User_Accounts.json", "w", encoding='utf-8') as json_file:
             json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
             json_file.close()

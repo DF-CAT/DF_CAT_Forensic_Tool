@@ -34,7 +34,10 @@ def Recent_Files(userprofile):
             item['created_time'] = item.pop('created_time')
             item['modified_time'] = item.pop('modified_time')
 
-            data["ART0006"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0006"]["data"].append(item)
+                    break
 
         json_data = data
 

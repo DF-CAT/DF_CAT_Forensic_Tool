@@ -29,7 +29,10 @@ def Shimcache(userprofile):
             item['path'] = item.pop('Path')
             item['modified_time'] = item.pop('LastModifiedTimeUTC')
 
-            data["ART0010"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0010"]["data"].append(item)
+                    break
 
         with open(r"ART0010_ShimCache.json", "w", encoding='utf-8') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)

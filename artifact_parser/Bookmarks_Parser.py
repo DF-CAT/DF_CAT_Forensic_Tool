@@ -2,7 +2,7 @@ import json
 
 
 def Bookmarks(userprofile):
-    data = {"ART_Non6": {"name": "Bookmarks", "isEvent": False, "data": []}}
+    data = {"ART0006": {"name": "Bookmarks", "isEvent": False, "data": []}}
     js_data = []
 
     try:
@@ -28,9 +28,12 @@ def Bookmarks(userprofile):
             item['created_time'] = item.pop('Created Time')
             item['browser'] = item.pop('Web Browser')
 
-            data["ART_Non6"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0006"]["data"].append(item)
+                    break
 
-        with open("ART_Non6_Bookmarks.json", 'w', encoding="utf-8") as outfile:
+        with open("ART0006_Bookmarks.json", 'w', encoding="utf-8") as outfile:
             json.dump(data, outfile, ensure_ascii=False, indent=4)
 
     except:

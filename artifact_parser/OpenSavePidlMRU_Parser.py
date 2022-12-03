@@ -32,7 +32,10 @@ def OpenSavePidlMRU(userprofile):
             item['modified_time'] = item.pop('file_modified_time')
             item['size'] = item.pop('file_size')
 
-            data["ART0001"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0001"]["data"].append(item)
+                    break
 
         json_data = data
 

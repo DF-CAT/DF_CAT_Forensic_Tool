@@ -28,7 +28,10 @@ def Recycle_Bin(userprofile):
             item['name'] = item.pop('FileName')
             item['deleted_time'] = item.pop('DeletedOn')
 
-            data["ART0033"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0033"]["data"].append(item)
+                    break
 
         with open(r"ART0033_Recycle_Bin.json", "w", encoding='utf-8') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)

@@ -2,7 +2,7 @@ import json
 
 
 def Browser_Downloads(userprofile):
-    data = {"ART_Non1": {"name": "Browser_Downloads", "isEvent": False, "data": []}}
+    data = {"ART0001": {"name": "Browser_Downloads", "isEvent": False, "data": []}}
     js_data = []
 
     try:
@@ -29,9 +29,12 @@ def Browser_Downloads(userprofile):
             item['size'] = item.pop('Download Size')
             item['path'] = item.pop('Full Path Filename')
 
-            data["ART_Non1"]["data"].append(item)
+            for key in item:
+                if item[key] is not None:
+                    data["ART0001"]["data"].append(item)
+                    break
 
-        with open("ART_Non1_Browser_Downloads.json", 'w', encoding="utf-8") as outfile:
+        with open("ART0001_Browser_Downloads.json", 'w', encoding="utf-8") as outfile:
             json.dump(data, outfile, ensure_ascii=False, indent=4)
 
     except:
