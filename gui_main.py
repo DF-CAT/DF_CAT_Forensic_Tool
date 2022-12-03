@@ -4,7 +4,6 @@ import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import *
 from tkinter import messagebox
-
 import pyuac
 
 import main
