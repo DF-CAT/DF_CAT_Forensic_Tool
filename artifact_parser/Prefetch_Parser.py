@@ -1,9 +1,14 @@
-import json, csv, os, re
+import csv
+import json
+import os
+import re
+
 
 def Prefetch(csv_files):
     csv_data = []
-    data = {"ART0009" : {"name" : "Prefetch", "isEvent" : False, "data":[]}}
-    exts = '''[.]exe|[.]pdf|[.]hwp|[.]doc|[.]docm|[.]docx|[.]dot|[.]dotx|[.]csv|[.]ppt|[.]pptm|[.]pptx|[.]xlm|[.]xls|[.]xlsm|[.]xlsx|[.]zip|[.]rar|[.]7z|[.]txt'''
+    data = {"ART0009": {"name": "Prefetch", "isEvent": False, "data": []}}
+    exts = '''[.]exe|[.]pdf|[.]hwp|[.]doc|[.]docm|[.]docx|[.]dot|[.]dotx|[.]csv|[.]ppt|[.]pptm|[.]pptx|[.]xlm|[
+    .]xls|[.]xlsm|[.]xlsx|[.]zip|[.]rar|[.]7z|[.]txt '''
     for csv_file in csv_files:
         try:
             with open(csv_file, 'rt', encoding="utf-8") as f:
@@ -31,16 +36,20 @@ def Prefetch(csv_files):
         files = []
 
         for file in my_list:
-            if re.search(exts, str(os.path.basename(file)), re.I) != None:
+            if re.search(exts, str(os.path.basename(file)), re.I) is not None:
                 files.append(os.path.basename(file))
 
-        if files == []:
+        if not files:
             continue
-        
+
         item["FilesLoaded"] = files
+
+        item['name'] = item.pop('ExecutableName')
+        item['executed_time'] = item.pop('LastRun')
+        item['loaded_files'] = item.pop('FilesLoaded')
 
         data["ART0009"]["data"].append(item)
 
-    with open(r"ART0009_Prefetch.json", "w", encoding='utf-8') as json_file: 
+    with open(r"ART0009_Prefetch.json", "w", encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)
         json_file.close()

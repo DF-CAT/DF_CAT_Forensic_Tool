@@ -1,16 +1,19 @@
-import json, xmltodict
+import json
+
+import xmltodict
+
 
 def Shell_Bags(userprofile):
-    data = {"ART0006" : {"name" : "Shell_Bags", "isEvent" : False, "data":[]}}
-    
+    data = {"ART0006": {"name": "Shell_Bags", "isEvent": False, "data": []}}
+
     with open("{}\\Shell_Bags.xml".format(userprofile), encoding='utf-16') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
-    
+
     for item in data_dict["folders_list"]["item"]:
         itemd = item.copy()
-        
+
         Ndel = ["path", "last_modified_time"]
-        
+
         for key in itemd.keys():
             num = 0
             for n in Ndel:
@@ -18,7 +21,10 @@ def Shell_Bags(userprofile):
                     num += 1
                 if num == len(Ndel):
                     del item[key]
-        
+
+        item['path'] = item.pop('path')
+        item['modified_time'] = item.pop('last_modified_time')
+
         data["ART0006"]["data"].append(item)
 
     json_data = data

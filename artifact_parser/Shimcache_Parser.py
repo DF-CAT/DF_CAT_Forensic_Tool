@@ -1,11 +1,13 @@
-import json, csv, os
+import csv
+import json
+
 
 def Shimcache(userprofile):
-    data = {"ART0010" : {"name" : "ShimCache", "isEvent" : False, "data":[]}}
+    data = {"ART0010": {"name": "ShimCache", "isEvent": False, "data": []}}
     csv_data = []
     with open("{}\\Shimcache.csv".format(userprofile), 'rt', encoding="utf-8") as f:
         csvReader = csv.DictReader(f)
-        
+
         for rows in csvReader:
             csv_data.append(rows)
 
@@ -22,8 +24,11 @@ def Shimcache(userprofile):
                 if num == len(Ndel):
                     del item[key]
 
+        item['path'] = item.pop('Path')
+        item['modified_time'] = item.pop('LastModifiedTimeUTC')
+
         data["ART0010"]["data"].append(item)
 
-    with open(r"ART0010_ShimCache.json", "w", encoding='utf-8') as json_file: 
+    with open(r"ART0010_ShimCache.json", "w", encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)
         json_file.close()
