@@ -1,5 +1,4 @@
 import json
-
 import xmltodict
 
 
@@ -14,7 +13,7 @@ def External_Device_USB_Usage(userprofile):
             itemd = item.copy()
 
             Ndel = ["description", "device_type", "serial_number", "registry_time_1", "registry_time_2",
-                    "driver_description", "instance_id", "capabilities"]
+                    "driver_description", "instance_id", "capabilities", "connect_time", "disconnect_time"]
 
             for key in itemd.keys():
                 num = 0
