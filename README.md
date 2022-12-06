@@ -1,10 +1,10 @@
-This tool uses an open source tool to transform it into a Json file suitable for the DF CAT service.
+This tool uses open source artifact collecting tools and restruct it to suitable json file for the [DF-CAT web service](http://df-cat.com/).
 
-## Getting Started
+## Basic usage
 
-1. Download DF_CAT_Tool.
+1. Download DF_CAT_Tool(aka. CACAT).
 2. Collect artifacts.
-3. The collected artifacts (json files) are used by the DF CAT service.
+3. Collected artifacts (json files, called CACAT data) can be used with DF-CAT web service.
 
 ## Licenses
 
