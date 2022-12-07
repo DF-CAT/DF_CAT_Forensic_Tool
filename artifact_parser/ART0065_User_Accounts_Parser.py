@@ -24,12 +24,12 @@ def User_Accounts(userprofile):
 
             for key in item:
                 if item[key] is not None:
-                    data["ART0004"]["data"].append(item)
+                    data["ART0065"]["data"].append(item)
                     break
 
         json_data = data
 
-        with open("ART00065_User_Accounts.json", "w", encoding='utf-8') as json_file:
+        with open("ART0065_User_Accounts.json", "w", encoding='utf-8') as json_file:
             json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
             json_file.close()

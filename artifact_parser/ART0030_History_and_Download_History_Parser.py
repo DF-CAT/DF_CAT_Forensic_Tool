@@ -7,7 +7,7 @@ def History_and_Download_History(userprofile):
     data = {"ART0030": {"name": "Web_History", "isEvent": False, "data": []}}
     csv_data = []
     try:
-        with open("{}\\History_and_Download_History.csv".format(userprofile), 'rt', encoding="utf-8") as f:
+        with open("{}\\History_and_Download_History.csv".format(userprofile), 'rt', encoding="euc-kr") as f:
             data_dict = csv.DictReader(f)
 
             for rows in data_dict:

@@ -7,7 +7,7 @@ def OpenSavePidlMRU(userprofile):
     data = {"ART0001": {"name": "OpenSavePidlMRU", "isEvent": False, "data": []}}
 
     try:
-        with open(r"{}\OpenSavePidlMRU.xml".format(userprofile), encoding='utf-8') as xml_file:
+        with open(r"{}\OpenSavePidlMRU.xml".format(userprofile), encoding='utf-16') as xml_file:
             data_dict = xmltodict.parse(xml_file.read())
 
         for item in data_dict["open_save_files_list"]["item"]:

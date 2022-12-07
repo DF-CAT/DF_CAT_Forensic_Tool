@@ -31,7 +31,7 @@ def Browser_Downloads(userprofile):
 
             for key in item:
                 if item[key] is not None:
-                    data["ART0001"]["data"].append(item)
+                    data["ART0002"]["data"].append(item)
                     break
 
         with open("ART0002_Browser_Downloads.json", 'w', encoding="utf-8") as outfile:

@@ -41,10 +41,10 @@ def Prefetch(csv_files):
 
         if not files:
             continue
-
+        item["FilesLoaded"] = files
         item['name'] = item.pop('ExecutableName')
         item['executed_time'] = item.pop('LastRun')
-        item["loaded_files"] = files
+        item["loaded_files"] = item.pop("FilesLoaded")
 
         for key in item:
             if item[key] is not None:

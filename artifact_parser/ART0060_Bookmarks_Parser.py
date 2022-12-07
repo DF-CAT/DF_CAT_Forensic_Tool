@@ -30,7 +30,7 @@ def Bookmarks(userprofile):
 
             for key in item:
                 if item[key] is not None:
-                    data["ART0006"]["data"].append(item)
+                    data["ART0060"]["data"].append(item)
                     break
 
         with open("ART0060_Bookmarks.json", 'w', encoding="utf-8") as outfile:
