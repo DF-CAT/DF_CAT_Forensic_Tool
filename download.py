@@ -77,7 +77,8 @@ def download(downpath, usb, open_mru, prefetch, recent, lnk, shim, recycle, brow
             open(down, 'wb').write(file.content)
 
         if history != 0:
-            url = r"https://www.nirsoft.net/utils/browsinghistoryview-x64.zip"
+            # url = r"https://www.nirsoft.net/utils/browsinghistoryview-x64.zip"
+            url = r"https://www.nirsoft.net/utils/browsinghistoryview.zip"
             parsed_file = urlparse(url)
             file_name = os.path.basename(parsed_file.path)
             file = requests.get(url)
