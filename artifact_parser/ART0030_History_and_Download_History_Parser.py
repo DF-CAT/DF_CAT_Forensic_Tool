@@ -1,4 +1,4 @@
-import csv
+import xmltodict
 import json
 import re
 
@@ -16,12 +16,10 @@ def History_and_Download_History(userprofile):
 
 def Callback_Start(userprofile):
     csv_data = []
-    with open("{}\\History_and_Download_History.csv".format(userprofile), 'rt', encoding="euc-kr") as f:
-        data_dict = csv.DictReader(f)
+    with open("{}\\History_and_Download_History.xml".format(userprofile), encoding="utf-16") as xml_file:
+        data_dict = xmltodict.parse(xml_file.read())
         
-        for rows in data_dict:
-            csv_data.append(rows)
-    maximum = len(csv_data)
+    maximum = len(data_dict["browsing_history_items"]["item"])
     
     pbarroot = Tk()
     path = os.path.join(os.path.dirname(__file__), "favicon.ico")
@@ -42,26 +40,26 @@ def Callback_Start(userprofile):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, csv_data, ))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict, ))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
-def Function_Start(pbarroot, pbar, csv_data):
+def Function_Start(pbarroot, pbar, data_dict):
     data = {"ART0030": {"name": "Web_History", "isEvent": False, "data": []}}
     try:
-        for item in csv_data:
+        for item in data_dict["browsing_history_items"]["item"]:
             sleep(0.01)
             pbar.step()
-            if item["URL"] is None:
+            if item["url"] is None:
                 continue
 
-            if re.search("http?s|file", str(item["URL"]), re.I) is None:
+            if re.search("http?s|file", str(item["url"]), re.I) is None:
                 continue
 
             itemd = item.copy()
 
-            Ndel = ["URL", "Title", "Visit Time", "Web Browser"]
+            Ndel = ["url", "title", "visit_time", "web_browser"]
 
             for key in itemd.keys():
                 num = 0
@@ -71,10 +69,10 @@ def Function_Start(pbarroot, pbar, csv_data):
                     if num == len(Ndel):
                         del item[key]
 
-            item['url'] = item.pop('URL')
-            item['title'] = item.pop('Title')
-            item['visited_time'] = item.pop('Visit Time')
-            item['browser'] = item.pop('Web Browser')
+            item['url'] = item.pop('url')
+            item['title'] = item.pop('title')
+            item['visited_time'] = item.pop('visit_time')
+            item['browser'] = item.pop('web_browser')
 
             for key in item:
                 if item[key] is not None:

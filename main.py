@@ -112,7 +112,7 @@ def art_main(usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downlo
         sleep(1)
         if history != 0:
             history_path = userprofile + r"\BrowsingHistoryView"
-            os.popen(r'{} /scomma {}\History_and_Download_History.csv'.format(history_path, userprofile)).read()
+            os.popen(r'{} /sxml {}\History_and_Download_History.xml'.format(history_path, userprofile)).read()
             ART0030_History_and_Download_History_Parser.History_and_Download_History(userprofile)
             print("ART0030_History_and_Download_History.json 생성")
         sleep(1)
