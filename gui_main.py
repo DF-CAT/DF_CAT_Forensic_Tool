@@ -157,9 +157,9 @@ paddingBottom = tk.Frame(root, height=30)
 paddingBottom.pack(side="bottom", fill="x", expand=True)
 
 if __name__ == '__main__':
-    # if not pyuac.isUserAdmin():
-    #     pyuac.runAsAdmin()
-    # else:
-    #     mainloop()
+    if not pyuac.isUserAdmin():
+        pyuac.runAsAdmin()
+    else:
+        mainloop()
 
-    mainloop()
+    # mainloop()
