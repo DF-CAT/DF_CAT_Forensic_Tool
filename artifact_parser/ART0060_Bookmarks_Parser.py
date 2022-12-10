@@ -47,7 +47,7 @@ def Function_Start(pbarroot, pbar, js_data):
 
     try:
         for item in js_data:
-            sleep(0.1)
+            sleep(0.001)
             pbar.step()
             itemd = item.copy()
 

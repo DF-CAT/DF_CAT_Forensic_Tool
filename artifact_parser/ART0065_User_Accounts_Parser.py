@@ -48,7 +48,7 @@ def Function_Start(pbarroot, pbar, data_dict):
 
     try:
         for item in data_dict["profiles_list"]["item"]:
-            sleep(1)
+            sleep(0.1)
             pbar.step()
             itemd = item.copy()
             Ndel = ["user_name", "profile_path", "folder_created_time", "registry_modified_time", "logon_time"]

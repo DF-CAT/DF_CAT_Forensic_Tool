@@ -48,7 +48,6 @@ def Function_Start(pbarroot, pbar, data_dict):
 
     try:
         for item in data_dict["user_actions_and_events_list"]["item"]:
-            sleep(0.00000001)
             pbar.step()
             if item["filename"] == None:
                 continue

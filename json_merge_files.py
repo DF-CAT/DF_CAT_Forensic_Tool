@@ -46,7 +46,7 @@ def Function_Start(pbarroot, pbar):
     art_len = len(glob.glob(r"*.json"))
     
     for f in glob.glob(r"*.json"):
-        sleep(1)
+        sleep(0.05)
         pbar.step()
         if re.search("ART", f):
             num = re.sub(r'[^0-9]', '', f)

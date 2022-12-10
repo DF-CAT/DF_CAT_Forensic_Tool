@@ -48,7 +48,7 @@ def Function_Start(pbarroot, pbar, data_dict):
 
     try:
         for item in data_dict["network_interfaces"]["item"]:
-            sleep(1)
+            sleep(0.05)
             pbar.step()
             itemd = item.copy()
 

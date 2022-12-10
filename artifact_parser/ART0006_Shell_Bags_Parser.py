@@ -48,7 +48,6 @@ def Function_Start(pbarroot, pbar, data_dict):
 
     try:
         for item in data_dict["folders_list"]["item"]:
-            sleep(0.00000001)
             pbar.step()
             itemd = item.copy()
 

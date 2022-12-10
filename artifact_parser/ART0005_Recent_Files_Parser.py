@@ -48,7 +48,7 @@ def Function_Start(pbarroot, pbar, data_dict):
 
     try:
         for item in data_dict["last_opened_files"]["item"]:
-            sleep(0.01)
+            sleep(0.001)
             pbar.step()
             if item["filename"] == None:
                 continue

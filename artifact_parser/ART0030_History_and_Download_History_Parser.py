@@ -49,7 +49,6 @@ def Function_Start(pbarroot, pbar, data_dict):
     data = {"ART0030": {"name": "Web_History", "isEvent": False, "data": []}}
     try:
         for item in data_dict["browsing_history_items"]["item"]:
-            sleep(0.01)
             pbar.step()
             if item["url"] is None:
                 continue

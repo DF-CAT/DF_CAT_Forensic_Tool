@@ -50,7 +50,7 @@ def Function_Start(pbarroot, pbar, csv_data):
     data = {"ART0033": {"name": "Recycle_Bin", "isEvent": False, "data": []}}
     try:
         for item in csv_data:
-            sleep(0.01)
+            sleep(0.001)
             pbar.step()
             itemd = item.copy()
 

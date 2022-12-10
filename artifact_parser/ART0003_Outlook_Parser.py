@@ -48,7 +48,7 @@ def Function_Start(pbarroot, pbar, data_dict):
 
     try:
         for item in data_dict["outlook_attachments"]["item"]:
-            sleep(0.01)
+            sleep(0.001)
             pbar.step()
             itemd = item.copy()
             Ndel = ["filename", "from_email", "to_email", "message_delivery_time", "file_size", "domain"]

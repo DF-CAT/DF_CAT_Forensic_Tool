@@ -1,4 +1,4 @@
-import csv
+import xmltodict
 import json
 import os
 import re
@@ -8,25 +8,14 @@ import tkinter.ttk
 import tkinter as tk
 import threading
 from time import sleep
-import os
 
-def Prefetch(csv_files):
-    testThread = threading.Thread(target=Callback_Start, args=(csv_files, ))
+def Prefetch(WinPrefetchView, userprofile, Ndata_list):
+    testThread = threading.Thread(target=Callback_Start, args=(WinPrefetchView, userprofile, Ndata_list, ))
     testThread.start()
     testThread.join()
 
-def Callback_Start(csv_files):
-    csv_data = []
-    for csv_file in csv_files:
-        try:
-            with open(csv_file, 'rt', encoding="utf-8") as f:
-                csvReader = csv.DictReader(f)
-
-                for rows in csvReader:
-                    csv_data.append(rows)
-        except:
-            pass
-    maximum = len(csv_data)
+def Callback_Start(WinPrefetchView, userprofile, Ndata_list):
+    maximum = len(Ndata_list)
     
     pbarroot = Tk()
     path = os.path.join(os.path.dirname(__file__), "favicon.ico")
@@ -47,22 +36,32 @@ def Callback_Start(csv_files):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, csv_data, ))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list, ))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
-def Function_Start(pbarroot, pbar, csv_data):
+def Function_Start(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list):
+    for pf in Ndata_list:
+        pbar.step()
+        pf["records"] = []
+        path = r"%systemdrive%\Windows\prefetch\{}".format(pf['filename'])
+        os.popen(r'{0} /sxml {1} /prefetchfile "{2}"'.format(WinPrefetchView, userprofile+r"\prefetch.xml", path)).read()
+    
+        with open(userprofile+r"\prefetch.xml", encoding='utf-16') as x_file:
+            data_list = xmltodict.parse(x_file.read())
+
+            for i in data_list["prefetch_records"]["item"]:
+                pf["records"].append({"name":i["filename"], "file_path":i["full_path"]})
+    
     data = {"ART0009": {"name": "Prefetch", "isEvent": False, "data": []}}
     exts = '''[.]exe|[.]pdf|[.]hwp|[.]doc|[.]docm|[.]docx|[.]dot|[.]dotx|[.]csv|[.]ppt|[.]pptm|[.]pptx|[.]xlm|[
-    .]xls|[.]xlsm|[.]xlsx|[.]zip|[.]rar|[.]7z|[.]txt '''
+    .]xls|[.]xlsm|[.]xlsx|[.]zip|[.]rar|[.]7z|[.]txt'''
 
-    for item in csv_data:
-        sleep(0.001)
-        pbar.step()
+    for item in Ndata_list:
         itemd = item.copy()
 
-        Ndel = ["ExecutableName", "FilesLoaded", "LastRun"]
+        Ndel = ["filename", "created_time", "modified_time", "process_path", "records"]
 
         for key in itemd.keys():
             num = 0
@@ -72,19 +71,21 @@ def Function_Start(pbarroot, pbar, csv_data):
                 if num == len(Ndel):
                     del item[key]
 
-        my_list = item["FilesLoaded"].split(',')
         files = []
 
-        for file in my_list:
-            if re.search(exts, str(os.path.basename(file)), re.I) is not None:
-                files.append(os.path.basename(file))
+        for file in item["records"]:
+            if re.search(exts, file["name"], re.I) is not None:
+                files.append(file)
 
         if not files:
             continue
-        item["FilesLoaded"] = files
-        item['name'] = item.pop('ExecutableName')
-        item['executed_time'] = item.pop('LastRun')
-        item["loaded_files"] = item.pop("FilesLoaded")
+        
+        item["records"] = files
+        item['name'] = item.pop('filename')
+        item['created_time'] = item.pop('created_time')
+        item['modified_time'] = item.pop('modified_time')
+        item['process_path'] = item.pop('process_path')
+        item['records'] = item.pop('records')
 
         for key in item:
             if item[key] is not None:
@@ -94,4 +95,5 @@ def Function_Start(pbarroot, pbar, csv_data):
     with open(r"ART0009_Prefetch.json", "w", encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)
         json_file.close()
-        pbarroot.destroy()
+    
+    pbarroot.destroy()

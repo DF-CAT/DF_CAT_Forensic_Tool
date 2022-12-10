@@ -46,7 +46,7 @@ def Function_Start(pbarroot, pbar, result):
 
     try:
         for i in result:
-            sleep(0.01)
+            sleep(0.001)
             pbar.step()
             re = i.split('\t')
             for key in re:
