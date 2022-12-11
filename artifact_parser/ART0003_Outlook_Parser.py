@@ -21,7 +21,7 @@ def Callback_Start(userprofile):
     maximum = len(data_dict["outlook_attachments"]["item"])
 
     pbarroot = Tk()
-    path = os.path.join(os.path.dirname(__file__), "../../../../Downloads/artifact_parser/favicon.ico")
+    path = os.path.join(os.path.dirname(__file__), "favicon.ico")
     if os.path.isfile(path):
         pbarroot.iconbitmap(path)
     pbarroot.title('DF CAT Tool')

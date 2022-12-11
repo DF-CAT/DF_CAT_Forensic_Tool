@@ -22,7 +22,7 @@ def Callback_Start(userprofile):
 
     pbarroot = Tk()
 
-    path = os.path.join(os.path.dirname(__file__), "../../../../Downloads/artifact_parser/favicon.ico")
+    path = os.path.join(os.path.dirname(__file__), "favicon.ico")
     if os.path.isfile(path):
         pbarroot.iconbitmap(path)
 
