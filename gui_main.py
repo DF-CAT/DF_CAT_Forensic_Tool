@@ -4,6 +4,7 @@ import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import *
 from tkinter import messagebox
+from tkinter import filedialog
 import pyuac
 
 import main
@@ -15,7 +16,7 @@ if os.path.isfile(path):
     root.iconbitmap(path)
 
 root.title("DF CAT Tool")
-root.geometry("700x380")
+root.geometry("650x350")
 root.resizable(width=False, height=False)
 
 paddingTop = Frame(root, height=20, width=700)
@@ -26,6 +27,7 @@ font = tkFont.Font(size=12)
 label = Label(frame_top, text="수집할 아티팩트를 선택해 주세요\n", font=font)
 label.pack(side="top")
 
+dir_path = None
 
 def th():
     start_th = threading.Thread(target=Start)
@@ -34,18 +36,26 @@ def th():
 
 
 def Start():
-    msg = messagebox.askquestion("DF CAT Tool", "아티팩트를 수집하기 위해 툴을 설치합니다.\n동의하시겠습니까?")
+    if dir_path is not None:
+        msg = messagebox.askquestion("DF CAT Tool", "아티팩트를 수집하기 위해 툴을 설치합니다.\n동의하시겠습니까?")
 
-    if msg == "no":
-        messagebox.showinfo("DF CAT Tool", "아티팩트를 수집하지 않습니다.")
+        if msg == "no":
+            messagebox.showinfo("DF CAT Tool", "아티팩트를 수집하지 않습니다.")
+        else:
+            messagebox.showinfo("DF CAT Tool", "아티팩트 수집을 시작합니다.")
+            button.configure(state="disabled")
+
+            if Json.get() != 1 and CSV.get() != 1:
+                messagebox.showinfo("DF CAT Tool", "추출할 형식을 체크해주세요")
+            else:
+                main.art_main(usb.get(), open_mru.get(), prefetch.get(), recent.get(), lnk.get(), shim.get(), recycle.get(),
+                          browser_downloads.get(), history.get(), jump.get(), last.get(), interfaces.get(),
+                          shell_bags.get(), userassist.get(), user_accounts.get(), outlook.get(), bookmarks.get(), Json.get(), CSV.get(),dir_path)
+                messagebox.showinfo("DF CAT Tool", "아티팩트 수집이 완료되었습니다.")
+
+            button.configure(state="normal")
     else:
-        messagebox.showinfo("DF CAT Tool", "아티팩트 수집을 시작합니다.")
-        button.configure(state="disabled")
-        main.art_main(usb.get(), open_mru.get(), prefetch.get(), recent.get(), lnk.get(), shim.get(), recycle.get(),
-                      browser_downloads.get(), history.get(), jump.get(), last.get(), interfaces.get(),
-                      shell_bags.get(), userassist.get(), user_accounts.get(), outlook.get(), bookmarks.get())
-        messagebox.showinfo("DF CAT Tool", "아티팩트 수집이 완료되었습니다.")
-        button.configure(state="normal")
+        messagebox.showinfo("DF CAT Tool", "경로를 지정해주세요")
 
 
 def selectall():
@@ -67,7 +77,6 @@ def selectall():
     bt16.select()
     bt17.select()
 
-
 def deselectall():
     bt1.deselect()
     bt2.deselect()
@@ -87,6 +96,12 @@ def deselectall():
     bt16.deselect()
     bt17.deselect()
 
+def select_dir_path():
+    global dir_path
+    dir_path = filedialog.askdirectory(parent=root, initialdir="/", title='DF_CAT_Tool')
+    text_path.configure(state='normal')
+    text_path.insert(1.0, dir_path)
+    text_path.configure(state='disabled')
 
 usb = IntVar()
 open_mru = IntVar()
@@ -145,21 +160,56 @@ bt15.grid(column=2, row=3, sticky=tk.W)
 bt16.grid(column=2, row=4, sticky=tk.W)
 bt17.grid(column=2, row=5, sticky=tk.W)
 
-padding = tk.Frame(frame_bot, height=30)
-padding.grid(column=1, row=7, columnspan=3)
-button = Button(frame_bot, width=10, text="Start", overrelief="solid", command=th, font=font)
-button.grid(column=1, row=8, sticky=tk.W)
-buttonSelectAll = Button(frame_bot, width=10, text="전체선택", overrelief="solid", command=selectall, font=font)
-buttonSelectAll.grid(column=1, row=9, sticky=tk.W)
-buttonDeSelectAll = Button(frame_bot, width=10, text="전체취소", overrelief="solid", command=deselectall, font=font)
-buttonDeSelectAll.grid(column=1, row=10, sticky=tk.W)
-paddingBottom = tk.Frame(root, height=30)
+
+frame_btn = tk.Frame(root)
+frame_btn.pack(side="top")
+
+padding = tk.Frame(frame_btn, height=10)
+padding.pack(side="top", fill="both", expand=True)
+buttonSelectAll = Button(frame_btn, width=10, text="전체선택", overrelief="solid", command=selectall, font=font)
+buttonSelectAll.pack(side="left")
+label0 = Label(frame_btn)
+label0.pack(side="left")
+buttonDeSelectAll = Button(frame_btn, width=10, text="전체취소", overrelief="solid", command=deselectall, font=font)
+buttonDeSelectAll.pack(side="left")
+label1 = Label(frame_btn)
+label1.pack(side="left")
+button = Button(frame_btn, width=10, text="Start", overrelief="solid", command=th, font=font)
+button.pack(side="left")
+label4 = Label(frame_btn)
+label4.pack(side="left")
+
+Json = IntVar()
+CSV = IntVar()
+
+Json_bt = Checkbutton(frame_btn, text="Export Json", variable=Json, font=("", 10))
+CSV_bt = Checkbutton(frame_btn, text="Export CSV", variable=CSV, font=("", 10))
+
+Json_bt.pack(side="top")
+CSV_bt.pack(side="top")
+
+frame_path = tk.Frame(root)
+frame_path.pack(side="top")
+
+padding = tk.Frame(frame_path, height=10)
+padding.pack(side="top", fill="both", expand=True)
+
+path_bt = Button(frame_path, width=10, text="폴더 선택", overrelief="solid", command=select_dir_path, font=font)
+path_bt.pack(side="left")
+label3 = Label(frame_path)
+label3.pack(side="left")
+text_path = Text(frame_path, width = 45, height = 1, relief = "groove", font=("맑은 고딕", 10), wrap="none", pady=5)
+text_path.configure(state='disabled')
+text_path.pack(side="left")
+
+paddingBottom = tk.Frame(root, height=10)
 paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-if __name__ == '__main__':
-    if not pyuac.isUserAdmin():
-        pyuac.runAsAdmin()
-    else:
-        mainloop()
 
-    # mainloop()
+if __name__ == '__main__':
+    # if not pyuac.isUserAdmin():
+    #     pyuac.runAsAdmin()
+    # else:
+    #     mainloop()
+
+    mainloop()
