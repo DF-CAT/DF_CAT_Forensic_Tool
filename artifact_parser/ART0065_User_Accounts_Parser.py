@@ -46,7 +46,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, data_dict):
-    data = {"ART0065": {"name": "User_Accounts", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0065": {"name": "User_Accounts", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["profiles_list"]["item"]:
@@ -68,14 +68,19 @@ def Function_Start(pbarroot, pbar, data_dict):
                     data["ART0065"]["data"].append(item)
                     break
 
+            item['timeline_items'] = []
             if item["folder_created_time"] is not None:
-                data["ART0065"]["timeline_items"].append(
+                item["timeline_items"].append(
                     {"name": "folder_created_time", "start_time": item["folder_created_time"],
                      "end_time": item["folder_created_time"]})
-                data["ART0065"]["timeline_items"].append(
+
+            if item["registry_modified_time"] is not None:
+                item["timeline_items"].append(
                     {"name": "registry_modified_time", "start_time": item["registry_modified_time"],
                      "end_time": item["registry_modified_time"]})
-                data["ART0065"]["timeline_items"].append(
+
+            if item["logon_time"] is not None:
+                item["timeline_items"].append(
                     {"name": "logon_time", "start_time": item["logon_time"], "end_time": item["logon_time"]})
 
         json_data = data

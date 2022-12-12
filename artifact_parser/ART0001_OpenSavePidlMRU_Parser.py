@@ -46,7 +46,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, data_dict):
-    data = {"ART0001": {"name": "OpenSavePidlMRU", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0001": {"name": "OpenSavePidlMRU", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["open_save_files_list"]["item"]:
@@ -72,6 +72,7 @@ def Function_Start(pbarroot, pbar, data_dict):
             item['created_time'] = item.pop('file_created_time')
             item['modified_time'] = item.pop('file_modified_time')
             item['size'] = item.pop('file_size')
+            item['timeline_items'] = []
 
             for key in item:
                 if item[key] is not None:
@@ -79,8 +80,16 @@ def Function_Start(pbarroot, pbar, data_dict):
                     break
 
             if item["open_time"] is not None:
-                data["ART0001"]["timeline_items"].append(
-                    {"name": "name", "start_time": item["open_time"], "end_time": item["modified_time"]})
+                item["timeline_items"].append(
+                    {"name": "open_time", "start_time": item["open_time"], "end_time": item["open_time"]})
+
+            if item["created_time"] is not None:
+                item["timeline_items"].append(
+                    {"name": "created_time", "start_time": item["created_time"], "end_time": item["created_time"]})
+
+            if item["modified_time"] is not None:
+                item["timeline_items"].append(
+                    {"name": "modified_time", "start_time": item["modified_time"], "end_time": item["modified_time"]})
 
         json_data = data
 

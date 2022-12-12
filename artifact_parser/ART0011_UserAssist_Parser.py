@@ -46,7 +46,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, data_dict):
-    data = {"ART0011": {"name": "UserAssist", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0011": {"name": "UserAssist", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["userassist_items_list"]["item"]:
@@ -69,6 +69,7 @@ def Function_Start(pbarroot, pbar, data_dict):
 
             item['name'] = item.pop('item_name')
             item['modified_time'] = item.pop('modified_time')
+            item['timeline_items'] = []
 
             for key in item:
                 if item[key] is not None:
@@ -76,8 +77,8 @@ def Function_Start(pbarroot, pbar, data_dict):
                     break
 
             if item["modified_time"] is not None:
-                data["ART0011"]["timeline_items"].append(
-                    {"name": "name", "start_time": item["modified_time"], "end_time": item["modified_time"]})
+                item["timeline_items"].append(
+                    {"name": "modified_time", "start_time": item["modified_time"], "end_time": item["modified_time"]})
 
         json_data = data
 

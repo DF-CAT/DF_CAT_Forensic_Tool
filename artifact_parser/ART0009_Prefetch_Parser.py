@@ -57,7 +57,7 @@ def Function_Start(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list):
             for i in data_list["prefetch_records"]["item"]:
                 pf["records"].append({"name": i["filename"], "file_path": i["full_path"]})
 
-    data = {"ART0009": {"name": "Prefetch", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0009": {"name": "Prefetch", "isEvent": False, "data": []}}
     exts = '''[.]exe|[.]pdf|[.]hwp|[.]doc|[.]docm|[.]docx|[.]dot|[.]dotx|[.]csv|[.]ppt|[.]pptm|[.]pptx|[.]xlm|[
     .]xls|[.]xlsm|[.]xlsx|[.]zip|[.]rar|[.]7z|[.]txt'''
 
@@ -89,15 +89,20 @@ def Function_Start(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list):
         item['modified_time'] = item.pop('modified_time')
         item['process_path'] = item.pop('process_path')
         item['records'] = item.pop('records')
+        item['timeline_items'] = []
 
         for key in item:
             if item[key] is not None:
                 data["ART0009"]["data"].append(item)
                 break
 
+        if item["created_time"] is not None:
+            item["timeline_items"].append(
+                {"name": "created_time", "start_time": item["created_time"], "end_time": item["created_time"]})
+
         if item["modified_time"] is not None:
-            data["ART0009"]["timeline_items"].append(
-                {"name": "name", "start_time": item["modified_time"], "end_time": item["modified_time"]})
+            item["timeline_items"].append(
+                {"name": "modified_time", "start_time": item["modified_time"], "end_time": item["modified_time"]})
 
     with open(r"ART0009_Prefetch.json", "w", encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)

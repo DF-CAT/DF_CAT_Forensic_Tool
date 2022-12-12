@@ -48,7 +48,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, csv_data):
-    data = {"ART0010": {"name": "ShimCache", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0010": {"name": "ShimCache", "isEvent": False, "data": []}}
 
     try:
         for item in csv_data:
@@ -67,6 +67,7 @@ def Function_Start(pbarroot, pbar, csv_data):
 
             item['path'] = item.pop('Path')
             item['modified_time'] = item.pop('LastModifiedTimeUTC')
+            item['timeline_items'] = []
 
             for key in item:
                 if item[key] is not None:
@@ -74,8 +75,8 @@ def Function_Start(pbarroot, pbar, csv_data):
                     break
 
             if item["modified_time"] is not None:
-                data["ART0010"]["timeline_items"].append(
-                    {"name": "path", "start_time": item["modified_time"], "end_time": item["modified_time"]})
+                item["timeline_items"].append(
+                    {"name": "modified_time", "start_time": item["modified_time"], "end_time": item["modified_time"]})
 
         with open(r"ART0010_ShimCache.json", "w", encoding='utf-8') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)

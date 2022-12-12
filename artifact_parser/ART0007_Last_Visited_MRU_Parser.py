@@ -45,7 +45,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, data_dict):
-    data = {"ART0007": {"name": "Last_Visited_MRU", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0007": {"name": "Last_Visited_MRU", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["user_actions_and_events_list"]["item"]:
@@ -68,6 +68,7 @@ def Function_Start(pbarroot, pbar, data_dict):
             item['name'] = item.pop('filename')
             item['path'] = item.pop('full_path')
             item['action_time'] = item.pop('action_time')
+            item['timeline_items'] = []
 
             for key in item:
                 if item[key] is not None:
@@ -75,8 +76,8 @@ def Function_Start(pbarroot, pbar, data_dict):
                     break
 
             if item["action_time"] is not None:
-                data["ART0007"]["timeline_items"].append(
-                    {"name": "name", "start_time": item["action_time"], "end_time": item["action_time"]})
+                item["timeline_items"].append(
+                    {"name": "action_time", "start_time": item["action_time"], "end_time": item["action_time"]})
 
         json_data = data
 

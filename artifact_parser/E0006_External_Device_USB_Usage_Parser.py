@@ -48,7 +48,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, data_dict):
-    data = {"E0006": {"name": "External_Device_USB_Usage", "isEvent": True, "data": [], "timeline_items": []}}
+    data = {"E0006": {"name": "External_Device_USB_Usage", "isEvent": True, "data": []}}
 
     try:
         for item in data_dict["usb_devices_list"]["item"]:
@@ -69,6 +69,7 @@ def Function_Start(pbarroot, pbar, data_dict):
 
             item['created_time'] = item.pop('registry_time_1')
             item['last_plug_unplug_time'] = item.pop('registry_time_2')
+            item['timeline_items'] = []
 
             for key in item:
                 if item[key] is not None:
@@ -84,8 +85,8 @@ def Function_Start(pbarroot, pbar, data_dict):
             elif item["disconnect_time"] is None:
                 item["disconnect_time"] = item["connect_time"]
 
-            data["E0006"]["timeline_items"].append(
-                {"name": "description", "start_time": item["connect_time"], "end_time": item["disconnect_time"]})
+            item["timeline_items"].append(
+                {"name": "connect", "start_time": item["connect_time"], "end_time": item["disconnect_time"]})
 
         json_data = data
 

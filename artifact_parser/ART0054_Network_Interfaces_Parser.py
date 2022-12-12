@@ -46,7 +46,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, data_dict):
-    data = {"ART0054": {"name": "Network_Interfaces", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0054": {"name": "Network_Interfaces", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["network_interfaces"]["item"]:
@@ -70,8 +70,8 @@ def Function_Start(pbarroot, pbar, data_dict):
                     break
 
             if item["registry_time"] is not None:
-                data["ART0054"]["timeline_items"].append(
-                    {"name": "device_name", "start_time": item["registry_time"],
+                item["timeline_items"].append(
+                    {"name": "registry_time", "start_time": item["registry_time"],
                      "end_time": item["registry_time"]})
 
         json_data = data

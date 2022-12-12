@@ -46,7 +46,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, data_dict):
-    data = {"ART0003": {"name": "E-mail_Attachments", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0003": {"name": "E-mail_Attachments", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["outlook_attachments"]["item"]:
@@ -71,13 +71,14 @@ def Function_Start(pbarroot, pbar, data_dict):
                     item['message_delivery_time'] = item.pop('message_delivery_time')
                     item['size'] = item.pop('file_size')
                     item['domain'] = item.pop('domain')
+                    item['timeline_items'] = []
 
                     data["ART0003"]["data"].append(item)
                     break
 
             if item['message_delivery_time'] is not None:
-                data["ART0003"]["timeline_items"].append(
-                    {"name": "name", "start_time": item['message_delivery_time'],
+                item["timeline_items"].append(
+                    {"name": "message_delivery_time", "start_time": item['message_delivery_time'],
                      "end_time": item['message_delivery_time']})
 
         json_data = data
