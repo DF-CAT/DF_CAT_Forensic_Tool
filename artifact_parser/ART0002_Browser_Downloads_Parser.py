@@ -45,7 +45,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, js_data):
-    data = {"ART0002": {"name": "Browser_Downloads", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0002": {"name": "Browser_Downloads", "isEvent": False, "data": []}}
 
     try:
         for item in js_data:
@@ -71,6 +71,7 @@ def Function_Start(pbarroot, pbar, js_data):
             item['end_time'] = item.pop('End Time')
             item['size'] = item.pop('Download Size')
             item['path'] = item.pop('Full Path Filename')
+            item['timeline_items'] = []
 
             for key in item:
                 if item[key] is not None:
@@ -81,18 +82,19 @@ def Function_Start(pbarroot, pbar, js_data):
                 continue
 
             if item["start_time"] is None:
-                data["ART0002"]["timeline_items"].append({
-                    "name": item["name"],
+                item["timeline_items"].append({
+                    "name": "end_time",
                     "start_time": item["end_time"],
                     "end_time": item["end_time"]})
             elif item["end_time"] is None:
-                data["ART0002"]["timeline_items"].append({
-                    "name": item["name"],
+                item["timeline_items"].append({
+                    "name": "start_time",
                     "start_time": item["start_time"],
                     "end_time": item["start_time"]})
+
             else:
-                data["ART0002"]["timeline_items"].append({
-                    "name": item["name"],
+                item["timeline_items"].append({
+                    "name": "",
                     "start_time": item["start_time"],
                     "end_time": item["end_time"]})
 

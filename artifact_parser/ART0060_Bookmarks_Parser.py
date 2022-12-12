@@ -45,7 +45,7 @@ def Callback_Start(userprofile):
 
 
 def Function_Start(pbarroot, pbar, js_data):
-    data = {"ART0060": {"name": "Bookmarks", "isEvent": False, "data": [], "timeline_items": []}}
+    data = {"ART0060": {"name": "Bookmarks", "isEvent": False, "data": []}}
 
     try:
         for item in js_data:
@@ -68,6 +68,7 @@ def Function_Start(pbarroot, pbar, js_data):
             item['path'] = item.pop('Folder Path')
             item['created_time'] = item.pop('Created Time')
             item['browser'] = item.pop('Web Browser')
+            item['timeline_items'] = []
 
             for key in item:
                 if item[key] is not None:
@@ -75,8 +76,8 @@ def Function_Start(pbarroot, pbar, js_data):
                     break
 
             if item['created_time'] is not None:
-                data["ART0060"]["timeline_items"].append(
-                    {"name": "url", "start_time": item['created_time'], "end_time": item['created_time']})
+                item["timeline_items"].append(
+                    {"name": "created_time", "start_time": item['created_time'], "end_time": item['created_time']})
 
         with open("ART0060_Bookmarks.json", 'w', encoding="utf-8") as outfile:
             json.dump(data, outfile, ensure_ascii=False, indent=4)
