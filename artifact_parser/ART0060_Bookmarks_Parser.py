@@ -1,5 +1,6 @@
 import json
 import os
+import csv
 import threading
 import tkinter as tk
 import tkinter.ttk
@@ -7,13 +8,13 @@ from time import sleep
 from tkinter import *
 
 
-def Bookmarks(userprofile):
-    testThread = threading.Thread(target=Callback_Start, args=(userprofile,))
+def Bookmarks(userprofile,json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(userprofile,json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(userprofile):
+def Callback_Start(userprofile,json_path, CSV, csv_path):
     js_data = []
     with open(r"{}\Bookmarks.json".format(userprofile), encoding="utf-16") as infile:
         js_data = json.load(infile)
@@ -38,13 +39,13 @@ def Callback_Start(userprofile):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, js_data,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, js_data,json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, js_data):
+def Function_Start(pbarroot, pbar, js_data,json_path, CSV, csv_path):
     data = {"ART0060": {"name": "Bookmarks", "isEvent": False, "data": []}}
 
     try:
@@ -79,8 +80,22 @@ def Function_Start(pbarroot, pbar, js_data):
                 item["timeline_items"].append(
                     {"name": "created_time", "start_time": item['created_time'], "end_time": item['created_time']})
 
-        with open("ART0060_Bookmarks.json", 'w', encoding="utf-8") as outfile:
-            json.dump(data, outfile, ensure_ascii=False, indent=4)
+        if json_path is not None:
+            with open(r"{}/ART0060_Bookmarks.json".format(json_path), 'w', encoding="utf-8") as outfile:
+                json.dump(data, outfile, ensure_ascii=False, indent=4)
+        
+        if CSV != 0:
+            with open(r"{}/ART0060_Bookmarks.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+                f = csv.writer(output_file)
+
+                # csv 파일에 header 추가
+                f.writerow(["name", "url", "path", "created_time", "browser"])
+
+                # write each row of a json file
+                for datum in data["ART0060"]["data"]:
+                    sleep(0.001)
+                    pbar.step()
+                    f.writerow([datum["name"], datum["url"], datum["path"], datum["created_time"], datum["browser"]])
 
     except:
         pass

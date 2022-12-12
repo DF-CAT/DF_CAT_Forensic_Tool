@@ -1,4 +1,5 @@
 import json
+import csv
 import os
 import re
 import threading
@@ -9,13 +10,13 @@ from tkinter import *
 import xmltodict
 
 
-def Prefetch(WinPrefetchView, userprofile, Ndata_list):
-    testThread = threading.Thread(target=Callback_Start, args=(WinPrefetchView, userprofile, Ndata_list,))
+def Prefetch(WinPrefetchView, userprofile, Ndata_list,json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(WinPrefetchView, userprofile, Ndata_list,json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(WinPrefetchView, userprofile, Ndata_list):
+def Callback_Start(WinPrefetchView, userprofile, Ndata_list,json_path, CSV, csv_path):
     maximum = len(Ndata_list)
 
     pbarroot = Tk()
@@ -37,13 +38,13 @@ def Callback_Start(WinPrefetchView, userprofile, Ndata_list):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list,json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list):
+def Function_Start(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list,json_path, CSV, csv_path):
     for pf in Ndata_list:
         pbar.step()
         pf["records"] = []
@@ -104,8 +105,21 @@ def Function_Start(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list):
             item["timeline_items"].append(
                 {"name": "modified_time", "start_time": item["modified_time"], "end_time": item["modified_time"]})
 
-    with open(r"ART0009_Prefetch.json", "w", encoding='utf-8') as json_file:
-        json.dump(data, json_file, indent=4, ensure_ascii=False)
-        json_file.close()
+    if json_path is not None:
+        with open(r"{}/ART0009_Prefetch.json".format(json_path), "w", encoding='utf-8') as json_file:
+            json.dump(data, json_file, indent=4, ensure_ascii=False)
+            json_file.close()
+
+    if CSV != 0:
+        with open(r"{}/ART0009_Prefetch.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+            
+            f = csv.writer(output_file)
+            # csv 파일에 header 추가
+            f.writerow(["name", "created_time", "modified_time", "process_path", "records"])
+            
+            # write each row of a json file
+            for datum in data["ART0009"]["data"]:
+                pbar.step()
+                f.writerow([datum["name"], datum["created_time"], datum["modified_time"], datum["process_path"], datum["records"]])
 
     pbarroot.destroy()

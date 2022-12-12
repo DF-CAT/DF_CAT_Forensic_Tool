@@ -1,6 +1,7 @@
 import json
 import os
 import threading
+import csv
 import tkinter as tk
 import tkinter.ttk
 from tkinter import *
@@ -8,13 +9,13 @@ from tkinter import *
 import xmltodict
 
 
-def Jump_Lists(userprofile):
-    testThread = threading.Thread(target=Callback_Start, args=(userprofile,))
+def Jump_Lists(userprofile,json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(userprofile,json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(userprofile):
+def Callback_Start(userprofile,json_path, CSV, csv_path):
     with open("{}\\Jump_Lists.xml".format(userprofile), encoding='utf-16') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
     maximum = len(data_dict["jump_lists"]["item"])
@@ -38,13 +39,13 @@ def Callback_Start(userprofile):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict,json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, data_dict):
+def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
     data = {"ART0008": {"name": "Jump_Lists", "isEvent": False, "data": []}}
 
     try:
@@ -78,11 +79,25 @@ def Function_Start(pbarroot, pbar, data_dict):
 
         json_data = data
 
-        with open("ART0008_Jump_Lists.json", "w", encoding='utf-8') as json_file:
-            json.dump(json_data, json_file, indent=4, ensure_ascii=False)
+        if json_path is not None:
+            with open(r"{}/ART0008_Jump_Lists.json".format(json_path), "w", encoding='utf-8') as json_file:
+                json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
             json_file.close()
-            pbarroot.destroy()
+        
+        if CSV != 0:
+            with open(r"{}/ART0008_Jump_Lists.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+                f = csv.writer(output_file)
+
+                # csv 파일에 header 추가
+                f.writerow(["name", "path", "accessed_time"])
+
+                # write each row of a json file
+                for datum in data["ART0008"]["data"]:
+                    pbar.step()
+                    f.writerow([datum["name"], datum["path"], datum["accessed_time"]])
 
     except:
         pass
+    
+    pbarroot.destroy()

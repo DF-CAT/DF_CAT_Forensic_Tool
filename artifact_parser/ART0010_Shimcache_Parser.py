@@ -7,13 +7,13 @@ import tkinter.ttk
 from tkinter import *
 
 
-def Shimcache(userprofile):
-    testThread = threading.Thread(target=Callback_Start, args=(userprofile,))
+def Shimcache(userprofile,json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(userprofile,json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(userprofile):
+def Callback_Start(userprofile,json_path, CSV, csv_path):
     csv_data = []
     with open("{}\\Shimcache.csv".format(userprofile), 'rt', encoding="utf-8") as f:
         csvReader = csv.DictReader(f)
@@ -41,13 +41,13 @@ def Callback_Start(userprofile):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, csv_data,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, csv_data,json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, csv_data):
+def Function_Start(pbarroot, pbar, csv_data,json_path, CSV, csv_path):
     data = {"ART0010": {"name": "ShimCache", "isEvent": False, "data": []}}
 
     try:
@@ -78,10 +78,23 @@ def Function_Start(pbarroot, pbar, csv_data):
                 item["timeline_items"].append(
                     {"name": "modified_time", "start_time": item["modified_time"], "end_time": item["modified_time"]})
 
-        with open(r"ART0010_ShimCache.json", "w", encoding='utf-8') as json_file:
-            json.dump(data, json_file, indent=4, ensure_ascii=False)
-            json_file.close()
-            pbarroot.destroy()
+        if json_path is not None:
+            with open(r"{}/ART0010_ShimCache.json".format(json_path), "w", encoding='utf-8') as json_file:
+                json.dump(data, json_file, indent=4, ensure_ascii=False)
+                json_file.close()
+        
+        if CSV != 0:
+            with open(r"{}/ART0010_ShimCache.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+                f = csv.writer(output_file)
+
+                # csv 파일에 header 추가
+                f.writerow(["path", "modified_time"])
+
+                # write each row of a json file
+                for datum in data["ART0010"]["data"]:
+                    pbar.step()
+                    f.writerow([datum["path"], datum["modified_time"]])
+        pbarroot.destroy()
 
     except:
         pass

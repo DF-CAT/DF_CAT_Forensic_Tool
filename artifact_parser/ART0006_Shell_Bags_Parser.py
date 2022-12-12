@@ -1,5 +1,6 @@
 import json
 import os
+import csv
 import threading
 import tkinter as tk
 import tkinter.ttk
@@ -8,13 +9,13 @@ from tkinter import *
 import xmltodict
 
 
-def Shell_Bags(userprofile):
-    testThread = threading.Thread(target=Callback_Start, args=(userprofile,))
+def Shell_Bags(userprofile,json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(userprofile,json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(userprofile):
+def Callback_Start(userprofile,json_path, CSV, csv_path):
     with open("{}\\Shell_Bags.xml".format(userprofile), encoding='utf-16') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
     maximum = len(data_dict["folders_list"]["item"])
@@ -38,13 +39,13 @@ def Callback_Start(userprofile):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict,json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, data_dict):
+def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
     data = {"ART0006": {"name": "Shell_Bags", "isEvent": False, "data": []}}
 
     try:
@@ -77,11 +78,25 @@ def Function_Start(pbarroot, pbar, data_dict):
 
         json_data = data
 
-        with open("ART0006_Shell_Bags.json", "w", encoding='utf-8') as json_file:
-            json.dump(json_data, json_file, indent=4, ensure_ascii=False)
+        if json_path is not None:
+            with open(r"{}/ART0006_Shell_Bags.json".format(json_path), "w", encoding='utf-8') as json_file:
+                json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
             json_file.close()
-            pbarroot.destroy()
+        
+        if CSV != 0:
+            with open(r"{}/ART0006_Shell_Bags.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+                f = csv.writer(output_file)
+
+                # csv 파일에 header 추가
+                f.writerow(["path", "modified_time"])
+
+                # write each row of a json file
+                for datum in data["ART0006"]["data"]:
+                    pbar.step()
+                    f.writerow([datum["path"], datum["modified_time"]])
 
     except:
         pass
+    
+    pbarroot.destroy()

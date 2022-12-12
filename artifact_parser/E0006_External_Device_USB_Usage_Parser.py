@@ -1,5 +1,6 @@
 import json
 import os
+import csv
 import threading
 import tkinter as tk
 import tkinter.ttk
@@ -9,13 +10,13 @@ from tkinter import *
 import xmltodict
 
 
-def External_Device_USB_Usage(userprofile):
-    testThread = threading.Thread(target=Callback_Start, args=(userprofile,))
+def External_Device_USB_Usage(userprofile, json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(userprofile, json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(userprofile):
+def Callback_Start(userprofile, json_path, CSV, csv_path):
     with open("{}\\External_Device_USB_Usage.xml".format(userprofile), encoding='euc-kr') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
     maximum = len(data_dict["usb_devices_list"]["item"])
@@ -41,13 +42,13 @@ def Callback_Start(userprofile):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict, json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, data_dict):
+def Function_Start(pbarroot, pbar, data_dict, json_path, CSV, csv_path):
     data = {"E0006": {"name": "External_Device_USB_Usage", "isEvent": True, "data": []}}
 
     try:
@@ -90,11 +91,28 @@ def Function_Start(pbarroot, pbar, data_dict):
 
         json_data = data
 
-        with open("E0006_External_Device_USB_Usage.json", "w", encoding='utf-8') as json_file:
-            json.dump(json_data, json_file, indent=4, ensure_ascii=False)
+        if json_path is not None:
+            with open(r"{}/E0006_External_Device_USB_Usage.json".format(json_path), "w", encoding='utf-8') as json_file:
+                json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
             json_file.close()
-            pbarroot.destroy()
+        
+        if CSV != 0:
+            with open(r"{}/E0006_External_Device_USB_Usage.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+                f = csv.writer(output_file)
+
+                # csv 파일에 header 추가
+                f.writerow(["description", "device_type", "serial_number", "created_time", "last_plug_unplug_time", "driver_description",
+                            "instance_id", "capabilities", "connect_time", "disconnect_time"])
+
+                # write each row of a json file
+                for datum in data["E0006"]["data"]:
+                    sleep(0.1)
+                    pbar.step()
+                    f.writerow([datum["description"], datum["device_type"], datum["serial_number"], datum["created_time"], datum["last_plug_unplug_time"], 
+                                datum["driver_description"], datum["instance_id"], datum["capabilities"], datum["connect_time"], datum["disconnect_time"]])
 
     except:
         pass
+    
+    pbarroot.destroy()

@@ -1,4 +1,5 @@
 import glob, json, re
+import pandas as pd
 
 from tkinter import *
 import tkinter.ttk
@@ -7,15 +8,21 @@ import threading
 from time import sleep
 import os
 
-def merge_files():
-    testThread = threading.Thread(target=Callback_Start)
+def merge_files(json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(json_path, CSV, csv_path, ))
     testThread.start()
     testThread.join()
     
-    return len(glob.glob(r"*.json"))
+    if CSV != 0:
+        return len(glob.glob(csv_path + r"/" + r"*.csv"))
+    else:
+        return len(glob.glob(json_path + r"/" + r"*.json"))
 
-def Callback_Start():
-    maximum = len(glob.glob(r"*.json"))
+def Callback_Start(json_path, CSV, csv_path):
+    try:
+        maximum = len(glob.glob(json_path + r"/" + r"*.json"))
+    except:
+        maximum = len(glob.glob(csv_path + r"/" + r"*.csv"))
     
     pbarroot = Tk()
     path = os.path.join(os.path.dirname(__file__), "favicon.ico")
@@ -36,29 +43,46 @@ def Callback_Start():
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
     
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, ))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, json_path, CSV, csv_path, ))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
-def Function_Start(pbarroot, pbar):
-    data = {"included" : {"artifacts": [], "events": []}}
-    art_len = len(glob.glob(r"*.json"))
+def Function_Start(pbarroot, pbar, json_path, CSV, csv_path):
+    if json_path is not None:
+        data = {"included" : {"artifacts": [], "events": []}}
+        art_len = len(glob.glob(json_path + r"/" + r"*.json"))
+
+        for f in glob.glob(json_path + r"/" + r"*.json"):
+            sleep(0.05)
+            pbar.step()
+            if re.search("ART", f):
+                num = re.sub(r'[^0-9]', '', f)
+                data["included"]["artifacts"].append("ART"+str(num))
+            else:
+                num = re.sub(r'[^0-9]', '', f)
+                data["included"]["events"].append("E"+str(num))
+
+            with open(f, encoding="utf-8") as infile:
+                data.update(json.load(infile))
+
+        with open(r"{0}/Collect_Result_{1}.json".format(json_path, art_len),'w', encoding="utf-8") as outfile:
+            json.dump(data, outfile, ensure_ascii=False, indent=4)
     
-    for f in glob.glob(r"*.json"):
-        sleep(0.05)
-        pbar.step()
-        if re.search("ART", f):
-            num = re.sub(r'[^0-9]', '', f)
-            data["included"]["artifacts"].append("ART"+str(num))
-        else:
-            num = re.sub(r'[^0-9]', '', f)
-            data["included"]["events"].append("E"+str(num))
-        
-        with open(f, encoding="utf-8") as infile:
-            data.update(json.load(infile))
-    
-    with open("Collect_Result_{}.json".format(art_len),'w', encoding="utf-8") as outfile:
-        json.dump(data, outfile, ensure_ascii=False, indent=4)
+    if CSV != 0:
+        art_len = len(glob.glob(csv_path + r"/" + r"*.csv"))
+        file_format = ".csv" # .csv .xlsx
+        file_list = glob.glob(f"{csv_path}/*{file_format}")
+
+        writer=pd.ExcelWriter(r'{0}\Collect_Result_{1}.xlsx'.format(csv_path, art_len), engine='openpyxl')
+
+        for csv in file_list:
+            sleep(0.05)
+            pbar.step()
+            name = os.path.splitext(os.path.basename(csv))
+            file_df = pd.read_csv(csv, encoding='ANSI')
+            file_df.to_excel(writer, sheet_name=name[0], index=False)
+
+        writer.save()
     
     pbarroot.destroy()
