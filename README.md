@@ -6,6 +6,10 @@ This tool uses open source artifact collecting tools and restruct it to suitable
 2. Collect artifacts.
 3. Collected artifacts (json files, called CACAT data) can be used with DF-CAT web service.
 
+## Execute in Python3.10
+    pip install -r requirements.txt
+then execute `gui_main.py`
+
 ## Licenses
 
 [Nirsoft](https://www.nirsoft.net/)  
