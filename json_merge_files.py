@@ -50,17 +50,18 @@ def Callback_Start(json_path, CSV, csv_path):
 
 def Function_Start(pbarroot, pbar, json_path, CSV, csv_path):
     if json_path is not None:
-        data = {"included" : {"artifacts": [], "events": []}}
+        data = {"included" : {"version": "1.0.4","artifacts": [], "events": []}}
         art_len = len(glob.glob(json_path + r"/" + r"*.json"))
 
         for f in glob.glob(json_path + r"/" + r"*.json"):
             sleep(0.05)
             pbar.step()
-            if re.search("ART", f):
-                num = re.sub(r'[^0-9]', '', f)
+            file = os.path.basename(f)
+            if re.search("ART", file):
+                num = re.sub(r'[^0-9]', '', file)
                 data["included"]["artifacts"].append("ART"+str(num))
             else:
-                num = re.sub(r'[^0-9]', '', f)
+                num = re.sub(r'[^0-9]', '', file)
                 data["included"]["events"].append("E"+str(num))
 
             with open(f, encoding="utf-8") as infile:

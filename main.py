@@ -23,6 +23,7 @@ def art_main(usb, open_mru, prefetch, recent, lnk, shim, recycle, browser_downlo
 
     with tempfile.TemporaryDirectory() as tempDir:
         json_path = None
+        csv_path = None
         who = os.popen('whoami').read()
         who = re.split(r"\\", who)
         times = time.strftime('%Y.%m.%d_%H.%M.%S')
