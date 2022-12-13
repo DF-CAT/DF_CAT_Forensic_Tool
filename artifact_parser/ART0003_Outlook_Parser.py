@@ -47,7 +47,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
-    data = {"ART0003": {"name": "E-mail_Attachments", "isEvent": False, "data": []}}
+    data = {"ART0003": {"version": "1.0.4","name": "E-mail_Attachments", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["outlook_attachments"]["item"]:

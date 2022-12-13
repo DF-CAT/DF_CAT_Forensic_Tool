@@ -46,7 +46,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
-    data = {"ART0007": {"name": "Last_Visited_MRU", "isEvent": False, "data": []}}
+    data = {"ART0007": {"version": "1.0.4","name": "Last_Visited_MRU", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["user_actions_and_events_list"]["item"]:

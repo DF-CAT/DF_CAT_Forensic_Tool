@@ -42,7 +42,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
     pbarroot.mainloop()
 
 def Function_Start(pbarroot, pbar, result,json_path, CSV, csv_path):
-    data = {"ART0022": {"name": "Shortcut_LNK_Files", "isEvent": False, "data": []}}
+    data = {"ART0022": {"version": "1.0.4","name": "Shortcut_LNK_Files", "isEvent": False, "data": []}}
 
     try:
         for i in result:

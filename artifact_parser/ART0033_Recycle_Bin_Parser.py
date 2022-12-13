@@ -49,7 +49,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, csv_data,json_path, CSV, csv_path):
-    data = {"ART0033": {"name": "Recycle_Bin", "isEvent": False, "data": []}}
+    data = {"ART0033": {"version": "1.0.4","name": "Recycle_Bin", "isEvent": False, "data": []}}
     try:
         for item in csv_data:
             sleep(0.001)

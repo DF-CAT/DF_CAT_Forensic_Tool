@@ -47,7 +47,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
     pbarroot.mainloop()
 
 def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
-    data = {"ART0030": {"name": "Web_History", "isEvent": False, "data": []}}
+    data = {"ART0030": {"version": "1.0.4","name": "Web_History", "isEvent": False, "data": []}}
     try:
         for item in data_dict["browsing_history_items"]["item"]:
             pbar.step()

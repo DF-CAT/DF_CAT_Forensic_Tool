@@ -47,7 +47,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
-    data = {"ART0054": {"name": "Network_Interfaces", "isEvent": False, "data": []}}
+    data = {"ART0054": {"version": "1.0.4","name": "Network_Interfaces", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["network_interfaces"]["item"]:

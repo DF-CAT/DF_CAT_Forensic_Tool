@@ -58,7 +58,7 @@ def Function_Start(pbarroot, pbar, WinPrefetchView, userprofile, Ndata_list,json
             for i in data_list["prefetch_records"]["item"]:
                 pf["records"].append({"name": i["filename"], "file_path": i["full_path"]})
 
-    data = {"ART0009": {"name": "Prefetch", "isEvent": False, "data": []}}
+    data = {"ART0009": {"version": "1.0.4","name": "Prefetch", "isEvent": False, "data": []}}
     exts = '''[.]exe|[.]pdf|[.]hwp|[.]doc|[.]docm|[.]docx|[.]dot|[.]dotx|[.]csv|[.]ppt|[.]pptm|[.]pptx|[.]xlm|[
     .]xls|[.]xlsm|[.]xlsx|[.]zip|[.]rar|[.]7z|[.]txt'''
 
