@@ -1,6 +1,6 @@
+import csv
 import json
 import os
-import csv
 import threading
 import tkinter as tk
 import tkinter.ttk
@@ -10,13 +10,13 @@ from tkinter import *
 import xmltodict
 
 
-def Recent_Files(userprofile,json_path, CSV, csv_path):
-    testThread = threading.Thread(target=Callback_Start, args=(userprofile,json_path, CSV, csv_path,))
+def Recent_Files(userprofile, json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(userprofile, json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(userprofile,json_path, CSV, csv_path):
+def Callback_Start(userprofile, json_path, CSV, csv_path):
     with open("{}\\RecentFiles.xml".format(userprofile), encoding='utf-16') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
     maximum = len(data_dict["last_opened_files"]["item"])
@@ -40,13 +40,13 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict,json_path, CSV, csv_path,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict, json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
+def Function_Start(pbarroot, pbar, data_dict, json_path, CSV, csv_path):
     data = {"version": "1.0.4", "ART0005": {"name": "Recent_Files", "isEvent": False, "data": []}}
 
     try:
@@ -80,15 +80,15 @@ def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
                     data["ART0005"]["data"].append(item)
                     break
 
-            if item["execute_time"] is not None:
+            if item["execute_time"] is not None and item["execute_time"] != "N / A":
                 item["timeline_items"].append(
                     {"name": "execute_time", "start_time": item["execute_time"], "end_time": item["execute_time"]})
 
-            if item["created_time"] is not None:
+            if item["created_time"] is not None and item["created_time"] != "N / A":
                 item["timeline_items"].append(
                     {"name": "created_time", "start_time": item["created_time"], "end_time": item["created_time"]})
 
-            if item["modified_time"] is not None:
+            if item["modified_time"] is not None and item["modified_time"] != "N / A":
                 item["timeline_items"].append(
                     {"name": "modified_time", "start_time": item["modified_time"], "end_time": item["modified_time"]})
 
@@ -99,9 +99,9 @@ def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
                 json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
             json_file.close()
-        
+
         if CSV != 0:
-            with open(r"{}/ART0005_Recent_Files.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+            with open(r"{}/ART0005_Recent_Files.csv".format(csv_path), 'w', newline='', encoding='ANSI') as output_file:
                 f = csv.writer(output_file)
 
                 # csv 파일에 header 추가
@@ -111,9 +111,10 @@ def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
                 for datum in data["ART0005"]["data"]:
                     sleep(0.001)
                     pbar.step()
-                    f.writerow([datum["name"], datum["extension"], datum["execute_time"], datum["created_time"], datum["modified_time"]])
+                    f.writerow([datum["name"], datum["extension"], datum["execute_time"], datum["created_time"],
+                                datum["modified_time"]])
 
     except:
         pass
-    
+
     pbarroot.destroy()
