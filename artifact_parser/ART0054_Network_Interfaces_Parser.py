@@ -47,7 +47,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
-    data = {"ART0054": {"version": "1.0.4","name": "Network_Interfaces", "isEvent": False, "data": []}}
+    data = {"version": "1.0.4", "ART0054": {"name": "Network_Interfaces", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["network_interfaces"]["item"]:
@@ -98,8 +98,7 @@ def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
                     pbar.step()
                     f.writerow([datum["device_name"], datum["connection_name"], datum["ip_address"], datum["subnet_mask"], datum["registry_time"]])
 
-    except Exception as e:
-        print(e)
+    except:
         pass
     
     pbarroot.destroy()

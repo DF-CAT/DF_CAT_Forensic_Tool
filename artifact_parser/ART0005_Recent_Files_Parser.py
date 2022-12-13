@@ -47,7 +47,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
-    data = {"ART0005": {"version": "1.0.4","name": "Recent_Files", "isEvent": False, "data": []}}
+    data = {"version": "1.0.4", "ART0005": {"name": "Recent_Files", "isEvent": False, "data": []}}
 
     try:
         for item in data_dict["last_opened_files"]["item"]:

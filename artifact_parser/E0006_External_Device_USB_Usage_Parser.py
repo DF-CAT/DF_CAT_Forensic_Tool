@@ -49,7 +49,7 @@ def Callback_Start(userprofile, json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, data_dict, json_path, CSV, csv_path):
-    data = {"E0006": {"version": "1.0.4","name": "External_Device_USB_Usage", "isEvent": True, "data": []}}
+    data = {"version": "1.0.4", "E0006": {"name": "External_Device_USB_Usage", "isEvent": True, "data": []}}
 
     try:
         for item in data_dict["usb_devices_list"]["item"]:

@@ -46,7 +46,7 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
 
 
 def Function_Start(pbarroot, pbar, js_data,json_path, CSV, csv_path):
-    data = {"ART0060": {"version": "1.0.4","name": "Bookmarks", "isEvent": False, "data": []}}
+    data = {"version": "1.0.4", "ART0060": {"name": "Bookmarks", "isEvent": False, "data": []}}
 
     try:
         for item in js_data:
