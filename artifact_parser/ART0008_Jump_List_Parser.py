@@ -1,7 +1,7 @@
+import csv
 import json
 import os
 import threading
-import csv
 import tkinter as tk
 import tkinter.ttk
 from tkinter import *
@@ -9,13 +9,13 @@ from tkinter import *
 import xmltodict
 
 
-def Jump_Lists(userprofile,json_path, CSV, csv_path):
-    testThread = threading.Thread(target=Callback_Start, args=(userprofile,json_path, CSV, csv_path,))
+def Jump_Lists(userprofile, json_path, CSV, csv_path):
+    testThread = threading.Thread(target=Callback_Start, args=(userprofile, json_path, CSV, csv_path,))
     testThread.start()
     testThread.join()
 
 
-def Callback_Start(userprofile,json_path, CSV, csv_path):
+def Callback_Start(userprofile, json_path, CSV, csv_path):
     with open("{}\\Jump_Lists.xml".format(userprofile), encoding='utf-16') as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
     maximum = len(data_dict["jump_lists"]["item"])
@@ -39,13 +39,13 @@ def Callback_Start(userprofile,json_path, CSV, csv_path):
     paddingBottom = tk.Frame(pbarroot, height=10)
     paddingBottom.pack(side="bottom", fill="x", expand=True)
 
-    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict,json_path, CSV, csv_path,))
+    tThread = threading.Thread(target=Function_Start, args=(pbarroot, pbar, data_dict, json_path, CSV, csv_path,))
     tThread.setDaemon(True)
     tThread.start()
     pbarroot.mainloop()
 
 
-def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
+def Function_Start(pbarroot, pbar, data_dict, json_path, CSV, csv_path):
     data = {"version": "1.0.4", "ART0008": {"name": "Jump_Lists", "isEvent": False, "data": []}}
 
     try:
@@ -68,14 +68,14 @@ def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
             item['accessed_time'] = item.pop('accessed_time')
             item['timeline_items'] = []
 
-            for key in item:
-                if item[key] is not None:
-                    data["ART0008"]["data"].append(item)
-                    break
-
             if item["accessed_time"] is not None:
                 item["timeline_items"].append(
                     {"name": "accessed_time", "start_time": item["accessed_time"], "end_time": item["accessed_time"]})
+
+            for key in ["name", "path", "accessed_time"]:
+                if item[key] is not None:
+                    data["ART0008"]["data"].append(item)
+                    break
 
         json_data = data
 
@@ -84,9 +84,9 @@ def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
                 json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
             json_file.close()
-        
+
         if CSV != 0:
-            with open(r"{}/ART0008_Jump_Lists.csv".format(csv_path), 'w', newline = '', encoding='ANSI') as output_file:
+            with open(r"{}/ART0008_Jump_Lists.csv".format(csv_path), 'w', newline='', encoding='ANSI') as output_file:
                 f = csv.writer(output_file)
 
                 # csv 파일에 header 추가
@@ -99,5 +99,5 @@ def Function_Start(pbarroot, pbar, data_dict,json_path, CSV, csv_path):
 
     except:
         pass
-    
+
     pbarroot.destroy()
