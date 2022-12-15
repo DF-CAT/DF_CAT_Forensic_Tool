@@ -10,7 +10,7 @@ This tool uses open source artifact collecting tools and restruct it to suitable
     pip install -r requirements.txt
 then execute `gui_main.py`
 
-## Licenses
+## Credit
 
 [Nirsoft](https://www.nirsoft.net/)  
 [Eric Zimmerman's tools](https://ericzimmerman.github.io/#!index.md)
