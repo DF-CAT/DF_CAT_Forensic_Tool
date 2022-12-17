@@ -1,0 +1,2330 @@
+{
+    "version": "1.0.4",
+    "ART0011": {
+        "name": "UserAssist",
+        "isEvent": false,
+        "data": [
+            {
+                "name": "Blend.9e423e1d",
+                "modified_time": "2021-11-28 오전 5:02:11",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 5:02:11",
+                        "end_time": "2021-11-28 오전 5:02:11"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Python27\\python.exe",
+                "modified_time": "2022-12-13 오전 12:30:00",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오전 12:30:00",
+                        "end_time": "2022-12-13 오전 12:30:00"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\Public\\Desktop\\League of Legends.lnk",
+                "modified_time": "2022-12-07 오후 5:06:51",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-07 오후 5:06:51",
+                        "end_time": "2022-12-07 오후 5:06:51"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\Public\\Desktop\\OBS Studio.lnk",
+                "modified_time": "2022-10-21 오후 5:19:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-10-21 오후 5:19:49",
+                        "end_time": "2022-10-21 오후 5:19:49"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\Public\\Desktop\\VMware Workstation Pro.lnk",
+                "modified_time": "2022-09-30 오후 9:20:37",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-30 오후 9:20:37",
+                        "end_time": "2022-09-30 오후 9:20:37"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\Public\\Desktop\\Wireshark.lnk",
+                "modified_time": "2022-05-21 오후 10:36:48",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-21 오후 10:36:48",
+                        "end_time": "2022-05-21 오후 10:36:48"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\AppData\\Local\\JetBrains\\Installations\\dotPeek213\\dotPeek64.exe",
+                "modified_time": "2022-03-06 오후 9:26:00",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 9:26:00",
+                        "end_time": "2022-03-06 오후 9:26:00"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\AppData\\Roaming\\CertpiaVerifier\\CertVerifier.exe",
+                "modified_time": "2021-12-24 오후 3:51:37",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-24 오후 3:51:37",
+                        "end_time": "2021-12-24 오후 3:51:37"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\010 Editor.lnk",
+                "modified_time": "2021-11-27 오전 1:15:22",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오전 1:15:22",
+                        "end_time": "2021-11-27 오전 1:15:22"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\7z2107-x64.exe",
+                "modified_time": "2022-05-27 오후 11:12:05",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 11:12:05",
+                        "end_time": "2022-05-27 오후 11:12:05"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\[1.2.1.42._x64_001]DFAS_Pro_DEMO_Setup.exe",
+                "modified_time": "2022-12-11 오후 4:18:53",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-11 오후 4:18:53",
+                        "end_time": "2022-12-11 오후 4:18:53"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Assembly.exe",
+                "modified_time": "2021-11-27 오후 9:03:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오후 9:03:01",
+                        "end_time": "2021-11-27 오후 9:03:01"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\CrackMe.exe",
+                "modified_time": "2021-11-27 오후 11:41:58",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오후 11:41:58",
+                        "end_time": "2021-11-27 오후 11:41:58"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\CrowdResponse\\CrowdResponse.exe",
+                "modified_time": "2022-03-28 오전 2:40:03",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-28 오전 2:40:03",
+                        "end_time": "2022-03-28 오전 2:40:03"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\CrowdResponse\\CrowdResponse64.exe",
+                "modified_time": "2022-03-28 오전 3:34:20",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-28 오전 3:34:20",
+                        "end_time": "2022-03-28 오전 3:34:20"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\DCode.exe",
+                "modified_time": "2022-03-06 오후 8:58:43",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 8:58:43",
+                        "end_time": "2022-03-06 오후 8:58:43"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Dolphago.exe",
+                "modified_time": "2021-11-28 오전 12:01:53",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 12:01:53",
+                        "end_time": "2021-11-28 오전 12:01:53"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\exiftool(-k).exe",
+                "modified_time": "2021-11-28 오전 7:04:52",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 7:04:52",
+                        "end_time": "2021-11-28 오전 7:04:52"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\file.0xfa8001a98de0.0xfa8001a88140.DataSectionObject.ftk-d.exe",
+                "modified_time": "2022-05-16 오전 3:35:28",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-16 오전 3:35:28",
+                        "end_time": "2022-05-16 오전 3:35:28"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\file.0xfa801900b070.0xfa8018f77690.DataSectionObject.TrueCrypt.exe",
+                "modified_time": "2022-05-16 오전 3:29:03",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-16 오전 3:29:03",
+                        "end_time": "2022-05-16 오전 3:29:03"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\game.exe",
+                "modified_time": "2022-03-06 오후 10:59:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 10:59:02",
+                        "end_time": "2022-03-06 오후 10:59:02"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\install.exe",
+                "modified_time": "2021-11-27 오후 9:23:08",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오후 9:23:08",
+                        "end_time": "2021-11-27 오후 9:23:08"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\JumpListExplorer\\JumpListExplorer.exe",
+                "modified_time": "2022-05-02 오전 4:33:15",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-02 오전 4:33:15",
+                        "end_time": "2022-05-02 오전 4:33:15"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\KAPE\\gkape.exe",
+                "modified_time": "2022-12-15 오후 9:14:12",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-15 오후 9:14:12",
+                        "end_time": "2022-12-15 오후 9:14:12"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\KAPE\\kape.exe",
+                "modified_time": "2022-12-15 오후 9:14:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-15 오후 9:14:02",
+                        "end_time": "2022-12-15 오후 9:14:02"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\CACAT_v1.0.4.exe",
+                "modified_time": "2022-12-17 오후 1:31:29",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-17 오후 1:31:29",
+                        "end_time": "2022-12-17 오후 1:31:29"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\DF_CAT_Tool.exe",
+                "modified_time": "2022-11-17 오후 9:01:04",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-17 오후 9:01:04",
+                        "end_time": "2022-11-17 오후 9:01:04"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\DF_CAT_Tool_v1.0.4.exe",
+                "modified_time": "2022-12-15 오후 9:28:06",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-15 오후 9:28:06",
+                        "end_time": "2022-12-15 오후 9:28:06"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\Forensics_Tool\\PECmd\\PECmd.exe",
+                "modified_time": "2022-11-16 오전 2:36:55",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-16 오전 2:36:55",
+                        "end_time": "2022-11-16 오전 2:36:55"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\output\\DF_CAT.exe",
+                "modified_time": "2022-11-16 오전 3:37:28",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-16 오전 3:37:28",
+                        "end_time": "2022-11-16 오전 3:37:28"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\output\\DF_CAT\\DF_CAT.exe",
+                "modified_time": "2022-11-16 오전 3:10:50",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-16 오전 3:10:50",
+                        "end_time": "2022-11-16 오전 3:10:50"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\output\\DF_CAT_Tool.exe",
+                "modified_time": "2022-12-13 오전 10:05:32",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오전 10:05:32",
+                        "end_time": "2022-12-13 오전 10:05:32"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\output\\DF_CAT_Tool_v1.0.4.exe",
+                "modified_time": "2022-12-13 오후 12:39:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 12:39:01",
+                        "end_time": "2022-12-13 오후 12:39:01"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Me\\Code\\PY\\DF_CAT_Forensic_Tool\\output\\gui_main.exe",
+                "modified_time": "2022-12-13 오전 1:32:14",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오전 1:32:14",
+                        "end_time": "2022-12-13 오전 1:32:14"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\password.exe",
+                "modified_time": "2022-03-06 오후 10:36:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 10:36:02",
+                        "end_time": "2022-03-06 오후 10:36:02"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\pestudio\\pestudio.exe",
+                "modified_time": "2022-03-06 오전 5:12:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오전 5:12:02",
+                        "end_time": "2022-03-06 오전 5:12:02"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\press.exe",
+                "modified_time": "2022-03-05 오후 11:38:58",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-05 오후 11:38:58",
+                        "end_time": "2022-03-05 오후 11:38:58"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\REGA Release\\REGA.exe",
+                "modified_time": "2021-11-28 오전 7:42:39",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 7:42:39",
+                        "end_time": "2021-11-28 오전 7:42:39"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\REGA_v1.5.3[Freeware]\\REGA.exe",
+                "modified_time": "2022-05-02 오전 3:23:28",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-02 오전 3:23:28",
+                        "end_time": "2022-05-02 오전 3:23:28"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Sublime Text.lnk",
+                "modified_time": "2022-05-28 오전 3:34:41",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-28 오전 3:34:41",
+                        "end_time": "2022-05-28 오전 3:34:41"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\010 Editor.lnk",
+                "modified_time": "2022-05-16 오후 1:30:04",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-16 오후 1:30:04",
+                        "end_time": "2022-05-16 오후 1:30:04"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\010EditorWin64Installer12.0.1.exe",
+                "modified_time": "2022-05-16 오후 1:23:31",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-16 오후 1:23:31",
+                        "end_time": "2022-05-16 오후 1:23:31"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\AccessData FTK Imager.lnk",
+                "modified_time": "2022-05-27 오후 10:43:56",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 10:43:56",
+                        "end_time": "2022-05-27 오후 10:43:56"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\AccessData_FTK_Imager_4.5.0_(x64).exe",
+                "modified_time": "2022-05-12 오후 11:55:00",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-12 오후 11:55:00",
+                        "end_time": "2022-05-12 오후 11:55:00"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\DB Browser for SQLite.exe.lnk",
+                "modified_time": "2022-04-24 오후 8:38:47",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-04-24 오후 8:38:47",
+                        "end_time": "2022-04-24 오후 8:38:47"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\DCode.exe",
+                "modified_time": "2022-05-02 오전 3:44:24",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-02 오전 3:44:24",
+                        "end_time": "2022-05-02 오전 3:44:24"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\die_win32_portable_3.03\\die.exe",
+                "modified_time": "2021-12-30 오전 1:13:05",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-30 오전 1:13:05",
+                        "end_time": "2021-12-30 오전 1:13:05"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\Event Log Explorer.lnk",
+                "modified_time": "2022-04-25 오전 3:16:19",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-04-25 오전 3:16:19",
+                        "end_time": "2022-04-25 오전 3:16:19"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\HxD.lnk",
+                "modified_time": "2022-05-09 오전 1:33:18",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-09 오전 1:33:18",
+                        "end_time": "2022-05-09 오전 1:33:18"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\IDA_Pro_7.5\\ida.exe",
+                "modified_time": "2022-12-13 오후 10:34:35",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:34:35",
+                        "end_time": "2022-12-13 오후 10:34:35"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\IDA_Pro_7.5\\ida64.exe",
+                "modified_time": "2022-03-06 오후 10:37:09",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 10:37:09",
+                        "end_time": "2022-03-06 오후 10:37:09"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\malzilla_1.2.0\\malzilla.exe",
+                "modified_time": "2021-12-29 오후 11:25:39",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-29 오후 11:25:39",
+                        "end_time": "2021-12-29 오후 11:25:39"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\odbg110\\OLLYDBG.EXE",
+                "modified_time": "2022-03-05 오전 12:10:55",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-05 오전 12:10:55",
+                        "end_time": "2022-03-05 오전 12:10:55"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\pestudio\\pestudio.exe",
+                "modified_time": "2022-03-06 오후 11:03:59",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 11:03:59",
+                        "end_time": "2022-03-06 오후 11:03:59"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\PEview.exe",
+                "modified_time": "2021-12-30 오전 1:12:23",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-30 오전 1:12:23",
+                        "end_time": "2021-12-30 오전 1:12:23"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\REGA_v1.5.3[Freeware]\\REGA.exe",
+                "modified_time": "2022-05-27 오후 10:56:15",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 10:56:15",
+                        "end_time": "2022-05-27 오후 10:56:15"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\release\\x64\\x64dbg.exe",
+                "modified_time": "2022-03-06 오후 9:20:26",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 9:20:26",
+                        "end_time": "2022-03-06 오후 9:20:26"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\release\\x96dbg.exe",
+                "modified_time": "2022-03-06 오전 12:23:32",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오전 12:23:32",
+                        "end_time": "2022-03-06 오전 12:23:32"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\snapshot_2021-11-24_01-25\\release\\x64\\x64dbg.exe",
+                "modified_time": "2021-11-28 오전 12:05:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 12:05:49",
+                        "end_time": "2021-11-28 오전 12:05:49"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tool\\winprefetchview-x64\\WinPrefetchView.exe",
+                "modified_time": "2022-03-30 오후 2:14:53",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-30 오후 2:14:53",
+                        "end_time": "2022-03-30 오후 2:14:53"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\browserdownloadsview-x64\\BrowserDownloadsView.exe",
+                "modified_time": "2022-11-28 오후 6:29:29",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 6:29:29",
+                        "end_time": "2022-11-28 오후 6:29:29"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\browsinghistoryview-x64\\BrowsingHistoryView.exe",
+                "modified_time": "2022-11-28 오후 7:29:44",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 7:29:44",
+                        "end_time": "2022-11-28 오후 7:29:44"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\jumplistsview\\JumpListsView.exe",
+                "modified_time": "2022-11-28 오후 7:35:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 7:35:01",
+                        "end_time": "2022-11-28 오후 7:35:01"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\lastactivityview\\LastActivityView.exe",
+                "modified_time": "2022-11-28 오후 7:52:34",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 7:52:34",
+                        "end_time": "2022-11-28 오후 7:52:34"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\networkinterfacesview-x64\\NetworkInterfacesView.exe",
+                "modified_time": "2022-11-28 오후 7:55:07",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 7:55:07",
+                        "end_time": "2022-11-28 오후 7:55:07"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\outlookattachview-x64\\OutlookAttachView.exe",
+                "modified_time": "2022-11-28 오후 8:00:45",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 8:00:45",
+                        "end_time": "2022-11-28 오후 8:00:45"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\shellbagsview\\ShellBagsView.exe",
+                "modified_time": "2022-11-28 오후 8:12:11",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 8:12:11",
+                        "end_time": "2022-11-28 오후 8:12:11"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\thumbcache_viewer_cmd.exe",
+                "modified_time": "2022-11-28 오후 5:02:29",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 5:02:29",
+                        "end_time": "2022-11-28 오후 5:02:29"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\userassistview\\UserAssistView.exe",
+                "modified_time": "2022-11-28 오후 8:16:17",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 8:16:17",
+                        "end_time": "2022-11-28 오후 8:16:17"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\userprofilesview\\UserProfilesView.exe",
+                "modified_time": "2022-11-28 오후 8:25:44",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 8:25:44",
+                        "end_time": "2022-11-28 오후 8:25:44"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\tools\\webbrowserbookmarksview\\WebBrowserBookmarksView.exe",
+                "modified_time": "2022-11-28 오후 8:30:25",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 8:30:25",
+                        "end_time": "2022-11-28 오후 8:30:25"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tor Browser\\Browser\\firefox.exe",
+                "modified_time": "2022-09-18 오후 8:55:20",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-18 오후 8:55:20",
+                        "end_time": "2022-09-18 오후 8:55:20"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Tor Browser\\Start Tor Browser.lnk",
+                "modified_time": "2022-09-18 오후 8:55:20",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-18 오후 8:55:20",
+                        "end_time": "2022-09-18 오후 8:55:20"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Visual Studio 2019.lnk",
+                "modified_time": "2022-05-27 오후 9:28:06",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 9:28:06",
+                        "end_time": "2022-05-27 오후 9:28:06"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Visual Studio Code.lnk",
+                "modified_time": "2022-12-16 오후 8:33:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-16 오후 8:33:49",
+                        "end_time": "2022-12-16 오후 8:33:49"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\winprefetchview-x64\\WinPrefetchView.exe",
+                "modified_time": "2022-11-17 오후 9:32:37",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-17 오후 9:32:37",
+                        "end_time": "2022-11-17 오후 9:32:37"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\Wireshark.lnk",
+                "modified_time": "2022-05-21 오후 10:23:29",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-21 오후 10:23:29",
+                        "end_time": "2022-05-21 오후 10:23:29"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\마우스 트레이서 - 최신 버전\\MouseTracer_1.0.7a_Setup.exe",
+                "modified_time": "2022-12-13 오후 10:00:27",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:00:27",
+                        "end_time": "2022-12-13 오후 10:00:27"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Desktop\\시큐 연초 대회\\리버싱문제\\디버거문제\\deVugger.exe",
+                "modified_time": "2022-03-06 오후 6:19:57",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 6:19:57",
+                        "end_time": "2022-03-06 오후 6:19:57"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\010EditorWin64Installer12.0.1.exe",
+                "modified_time": "2022-03-06 오후 8:23:53",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 8:23:53",
+                        "end_time": "2022-03-06 오후 8:23:53"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\AccessData_FTK_Imager_4.5.0_(x64).exe",
+                "modified_time": "2022-03-05 오후 9:18:59",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-05 오후 9:18:59",
+                        "end_time": "2022-03-05 오후 9:18:59"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\browserdownloadsview-x64\\BrowserDownloadsView.exe",
+                "modified_time": "2022-12-08 오후 9:09:37",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-08 오후 9:09:37",
+                        "end_time": "2022-12-08 오후 9:09:37"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\browsinghistoryview-x64\\BrowsingHistoryView.exe",
+                "modified_time": "2022-12-08 오후 9:03:43",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-08 오후 9:03:43",
+                        "end_time": "2022-12-08 오후 9:03:43"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\DF_CAT_Tool.exe",
+                "modified_time": "2022-12-11 오후 2:24:33",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-11 오후 2:24:33",
+                        "end_time": "2022-12-11 오후 2:24:33"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\nos_setup.exe",
+                "modified_time": "2021-12-24 오후 2:12:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-24 오후 2:12:02",
+                        "end_time": "2021-12-24 오후 2:12:02"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\PDFverify.exe",
+                "modified_time": "2021-12-24 오후 3:51:10",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-24 오후 3:51:10",
+                        "end_time": "2021-12-24 오후 3:51:10"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\SASMSetup3121.exe",
+                "modified_time": "2021-11-27 오후 9:29:13",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오후 9:29:13",
+                        "end_time": "2021-11-27 오후 9:29:13"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\shman-x64\\shman.exe",
+                "modified_time": "2022-12-08 오후 9:05:33",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-08 오후 9:05:33",
+                        "end_time": "2022-12-08 오후 9:05:33"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\torbrowser-install-win64-11.0.6_en-US.exe",
+                "modified_time": "2022-02-14 오후 8:45:13",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-02-14 오후 8:45:13",
+                        "end_time": "2022-02-14 오후 8:45:13"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\viewerSetup.exe",
+                "modified_time": "2021-12-24 오후 3:37:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-24 오후 3:37:49",
+                        "end_time": "2021-12-24 오후 3:37:49"
+                    }
+                ]
+            },
+            {
+                "name": "C:\\Users\\User\\Downloads\\Wireshark-win64-3.6.5.exe",
+                "modified_time": "2022-05-21 오후 10:24:23",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-21 오후 10:24:23",
+                        "end_time": "2022-05-21 오후 10:24:23"
+                    }
+                ]
+            },
+            {
+                "name": "CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc!ubuntu",
+                "modified_time": "2022-03-06 오후 4:41:33",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 4:41:33",
+                        "end_time": "2022-03-06 오후 4:41:33"
+                    }
+                ]
+            },
+            {
+                "name": "CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc!ubuntuonwindows",
+                "modified_time": "2022-05-16 오전 3:06:35",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-16 오전 3:06:35",
+                        "end_time": "2022-05-16 오전 3:06:35"
+                    }
+                ]
+            },
+            {
+                "name": "Chrome",
+                "modified_time": "2022-12-17 오후 1:31:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-17 오후 1:31:49",
+                        "end_time": "2022-12-17 오후 1:31:49"
+                    }
+                ]
+            },
+            {
+                "name": "com.evernote.Evernote",
+                "modified_time": "2022-01-22 오후 10:53:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-01-22 오후 10:53:02",
+                        "end_time": "2022-01-22 오후 10:53:02"
+                    }
+                ]
+            },
+            {
+                "name": "com.squirrel.Discord.Discord",
+                "modified_time": "2022-11-06 오전 11:23:54",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-06 오전 11:23:54",
+                        "end_time": "2022-11-06 오전 11:23:54"
+                    }
+                ]
+            },
+            {
+                "name": "com.squirrel.JandiApp.JandiApp",
+                "modified_time": "2022-06-30 오후 11:28:13",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-06-30 오후 11:28:13",
+                        "end_time": "2022-06-30 오후 11:28:13"
+                    }
+                ]
+            },
+            {
+                "name": "desktop.op.gg",
+                "modified_time": "2022-06-02 오전 9:51:31",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-06-02 오전 9:51:31",
+                        "end_time": "2022-06-02 오전 9:51:31"
+                    }
+                ]
+            },
+            {
+                "name": "E046963F.LenovoCompanion_k1h2ywk1493x8!App",
+                "modified_time": "2022-08-30 오후 9:50:15",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-08-30 오후 9:50:15",
+                        "end_time": "2022-08-30 오후 9:50:15"
+                    }
+                ]
+            },
+            {
+                "name": "E:\\SamsungPortableSSD.exe",
+                "modified_time": "2022-10-03 오후 3:36:17",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-10-03 오후 3:36:17",
+                        "end_time": "2022-10-03 오후 3:36:17"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.549981C3F5F10_8wekyb3d8bbwe!App",
+                "modified_time": "2022-11-14 오후 9:35:57",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-14 오후 9:35:57",
+                        "end_time": "2022-11-14 오후 9:35:57"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.AutoGenerated.{0FDD9C6B-656B-0F1F-AB08-B1CDBB7067B3}",
+                "modified_time": "2022-02-15 오후 10:41:31",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-02-15 오후 10:41:31",
+                        "end_time": "2022-02-15 오후 10:41:31"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.AutoGenerated.{29591C0F-7C09-B655-C0EB-8544FCA7D1DE}",
+                "modified_time": "2022-11-14 오후 9:36:06",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-14 오후 9:36:06",
+                        "end_time": "2022-11-14 오후 9:36:06"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.AutoGenerated.{37EBBD00-EA0F-32AD-EBB1-9F1893333BF2}",
+                "modified_time": "2022-12-07 오후 5:06:51",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-07 오후 5:06:51",
+                        "end_time": "2022-12-07 오후 5:06:51"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.AutoGenerated.{65E2237A-4DF5-85E9-DA7D-76072F04877F}",
+                "modified_time": "2022-09-18 오후 8:52:22",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-18 오후 8:52:22",
+                        "end_time": "2022-09-18 오후 8:52:22"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.AutoGenerated.{70F1BE7E-1FB2-0B6D-446A-DED3313952CE}",
+                "modified_time": "2021-11-28 오전 6:36:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 6:36:01",
+                        "end_time": "2021-11-28 오전 6:36:01"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.AutoGenerated.{DB59D7CA-28F5-B5FA-87C8-B9875B0DEDCF}",
+                "modified_time": "2022-12-15 오후 9:17:17",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-15 오후 9:17:17",
+                        "end_time": "2022-12-15 오후 9:17:17"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.AutoGenerated.{DF60CA8F-4884-F0EE-090A-264B39A0FD55}",
+                "modified_time": "2021-11-27 오후 9:58:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오후 9:58:01",
+                        "end_time": "2021-11-27 오후 9:58:01"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.InternetExplorer.Default",
+                "modified_time": "2021-12-23 오후 2:02:16",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-23 오후 2:02:16",
+                        "end_time": "2021-12-23 오후 2:02:16"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Office.EXCEL.EXE.15",
+                "modified_time": "2022-12-15 오후 9:47:38",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-15 오후 9:47:38",
+                        "end_time": "2022-12-15 오후 9:47:38"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Office.OUTLOOK.EXE.15",
+                "modified_time": "2022-11-28 오후 8:17:06",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 8:17:06",
+                        "end_time": "2022-11-28 오후 8:17:06"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Office.POWERPNT.EXE.15",
+                "modified_time": "2022-12-17 오전 12:07:23",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-17 오전 12:07:23",
+                        "end_time": "2022-12-17 오전 12:07:23"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Office.WINWORD.EXE.15",
+                "modified_time": "2022-12-14 오전 12:26:40",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-14 오전 12:26:40",
+                        "end_time": "2022-12-14 오전 12:26:40"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.VisualStudioCode",
+                "modified_time": "2022-12-16 오후 8:33:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-16 오후 8:33:49",
+                        "end_time": "2022-12-16 오후 8:33:49"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Windows.ControlPanel",
+                "modified_time": "2022-12-16 오후 8:43:10",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-16 오후 8:43:10",
+                        "end_time": "2022-12-16 오후 8:43:10"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Windows.Explorer",
+                "modified_time": "2022-12-16 오후 8:43:10",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-16 오후 8:43:10",
+                        "end_time": "2022-12-16 오후 8:43:10"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Windows.Photos_8wekyb3d8bbwe!App",
+                "modified_time": "2022-11-17 오후 8:31:53",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-17 오후 8:31:53",
+                        "end_time": "2022-11-17 오후 8:31:53"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.Windows.SecHealthUI_cw5n1h2txyewy!SecHealthUI",
+                "modified_time": "2022-06-14 오후 5:50:40",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-06-14 오후 5:50:40",
+                        "end_time": "2022-06-14 오후 5:50:40"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App",
+                "modified_time": "2022-09-30 오후 8:59:21",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-30 오후 8:59:21",
+                        "end_time": "2022-09-30 오후 8:59:21"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.WindowsCamera_8wekyb3d8bbwe!App",
+                "modified_time": "2021-12-01 오후 12:33:14",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-01 오후 12:33:14",
+                        "end_time": "2021-12-01 오후 12:33:14"
+                    }
+                ]
+            },
+            {
+                "name": "microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.mail",
+                "modified_time": "2022-03-13 오후 10:40:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-13 오후 10:40:01",
+                        "end_time": "2022-03-13 오후 10:40:01"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.WindowsStore_8wekyb3d8bbwe!App",
+                "modified_time": "2022-03-07 오전 2:25:52",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-07 오전 2:25:52",
+                        "end_time": "2022-03-07 오전 2:25:52"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.XboxGamingOverlay_8wekyb3d8bbwe!App",
+                "modified_time": "2022-12-08 오후 1:53:52",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-08 오후 1:53:52",
+                        "end_time": "2022-12-08 오후 1:53:52"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.ZuneMusic_8wekyb3d8bbwe!Microsoft.ZuneMusic",
+                "modified_time": "2022-11-21 오후 7:54:33",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-21 오후 7:54:33",
+                        "end_time": "2022-11-21 오후 7:54:33"
+                    }
+                ]
+            },
+            {
+                "name": "Microsoft.ZuneVideo_8wekyb3d8bbwe!Microsoft.ZuneVideo",
+                "modified_time": "2022-10-21 오후 5:42:19",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-10-21 오후 5:42:19",
+                        "end_time": "2022-10-21 오후 5:42:19"
+                    }
+                ]
+            },
+            {
+                "name": "MSEdge",
+                "modified_time": "2022-12-13 오전 10:51:56",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오전 10:51:56",
+                        "end_time": "2022-12-13 오전 10:51:56"
+                    }
+                ]
+            },
+            {
+                "name": "notion.id",
+                "modified_time": "2022-12-13 오후 10:29:03",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:29:03",
+                        "end_time": "2022-12-13 오후 10:29:03"
+                    }
+                ]
+            },
+            {
+                "name": "VisualStudio.9e423e1d",
+                "modified_time": "2022-05-27 오후 9:28:06",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 9:28:06",
+                        "end_time": "2022-05-27 오후 9:28:06"
+                    }
+                ]
+            },
+            {
+                "name": "VMware.Workstation.vmui",
+                "modified_time": "2022-09-30 오후 9:20:37",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-30 오후 9:20:37",
+                        "end_time": "2022-09-30 오후 9:20:37"
+                    }
+                ]
+            },
+            {
+                "name": "windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel",
+                "modified_time": "2022-12-16 오후 6:50:44",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-16 오후 6:50:44",
+                        "end_time": "2022-12-16 오후 6:50:44"
+                    }
+                ]
+            },
+            {
+                "name": "zoom.us.Zoom Video Meetings",
+                "modified_time": "2021-10-11 오전 11:51:15",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-10-11 오전 11:51:15",
+                        "end_time": "2021-10-11 오전 11:51:15"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\010 Editor\\010 Editor Help File.lnk",
+                "modified_time": "2021-11-27 오전 5:17:51",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오전 5:17:51",
+                        "end_time": "2021-11-27 오전 5:17:51"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\010 Editor\\010 Editor.lnk",
+                "modified_time": "2022-03-06 오후 7:03:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 7:03:02",
+                        "end_time": "2022-03-06 오후 7:03:02"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\7-Zip\\7-Zip File Manager.lnk",
+                "modified_time": "2022-05-27 오후 11:12:17",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 11:12:17",
+                        "end_time": "2022-05-27 오후 11:12:17"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\AccessData\\FTK Imager\\FTK Imager.lnk",
+                "modified_time": "2022-03-18 오전 1:53:27",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-18 오전 1:53:27",
+                        "end_time": "2022-03-18 오전 1:53:27"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Accessories\\Notepad.lnk",
+                "modified_time": "2022-12-13 오후 10:01:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:01:02",
+                        "end_time": "2022-12-13 오후 10:01:02"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Accessories\\Paint.lnk",
+                "modified_time": "2022-05-18 오후 7:38:18",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-18 오후 7:38:18",
+                        "end_time": "2022-05-18 오후 7:38:18"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Accessories\\Remote Desktop Connection.lnk",
+                "modified_time": "2021-11-07 오후 1:15:59",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-07 오후 1:15:59",
+                        "end_time": "2021-11-07 오후 1:15:59"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Administrative Tools\\Computer Management.lnk",
+                "modified_time": "2022-09-18 오후 8:52:22",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-18 오후 8:52:22",
+                        "end_time": "2022-09-18 오후 8:52:22"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Administrative Tools\\Task Scheduler.lnk",
+                "modified_time": "2021-10-17 오전 12:01:59",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-10-17 오전 12:01:59",
+                        "end_time": "2021-10-17 오전 12:01:59"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Administrative Tools\\Windows Defender Firewall with Advanced Security.lnk",
+                "modified_time": "2022-05-21 오후 9:38:28",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-21 오후 9:38:28",
+                        "end_time": "2022-05-21 오후 9:38:28"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Blend for Visual Studio 2019.lnk",
+                "modified_time": "2021-11-28 오전 5:02:11",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 5:02:11",
+                        "end_time": "2021-11-28 오전 5:02:11"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Certpia 전자문서검증\\써트피아 전자문서 검증뷰어.lnk",
+                "modified_time": "2021-12-24 오후 3:51:37",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-24 오후 3:51:37",
+                        "end_time": "2021-12-24 오후 3:51:37"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Chrome.lnk",
+                "modified_time": "2022-12-13 오후 10:34:36",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:34:36",
+                        "end_time": "2022-12-13 오후 10:34:36"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Excel.lnk",
+                "modified_time": "2022-03-07 오전 2:27:22",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-07 오전 2:27:22",
+                        "end_time": "2022-03-07 오전 2:27:22"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Git\\Git Bash.lnk",
+                "modified_time": "2022-02-15 오후 10:41:31",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-02-15 오후 10:41:31",
+                        "end_time": "2022-02-15 오후 10:41:31"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Git\\Git CMD.lnk",
+                "modified_time": "2022-11-14 오후 9:33:43",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-14 오후 9:33:43",
+                        "end_time": "2022-11-14 오후 9:33:43"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\INCAInternet\\nProtect Online Security V1.0.lnk",
+                "modified_time": "2021-12-24 오후 2:14:46",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-24 오후 2:14:46",
+                        "end_time": "2021-12-24 오후 2:14:46"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Lenovo Migration Assistant\\Lenovo Migration Assistant.lnk",
+                "modified_time": "2021-10-14 오전 9:24:45",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-10-14 오전 9:24:45",
+                        "end_time": "2021-10-14 오전 9:24:45"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\MySQL\\MySQL Server 8.0\\MySQL 8.0 Command Line Client - Unicode.lnk",
+                "modified_time": "2021-11-24 오전 12:04:12",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-24 오전 12:04:12",
+                        "end_time": "2021-11-24 오전 12:04:12"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\MySQL\\MySQL Server 8.0\\MySQL 8.0 Command Line Client.lnk",
+                "modified_time": "2021-11-27 오후 9:58:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-27 오후 9:58:01",
+                        "end_time": "2021-11-27 오후 9:58:01"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\MySQL\\MySQL Workbench 8.0 CE.lnk",
+                "modified_time": "2022-10-25 오후 6:01:03",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-10-25 오후 6:01:03",
+                        "end_time": "2022-10-25 오후 6:01:03"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\OpenStego\\Run OpenStego.lnk",
+                "modified_time": "2021-11-28 오전 6:36:01",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-28 오전 6:36:01",
+                        "end_time": "2021-11-28 오전 6:36:01"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Outlook.lnk",
+                "modified_time": "2022-11-28 오후 8:17:06",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-28 오후 8:17:06",
+                        "end_time": "2022-11-28 오후 8:17:06"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\PowerPoint.lnk",
+                "modified_time": "2022-03-07 오전 2:26:48",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-07 오전 2:26:48",
+                        "end_time": "2022-03-07 오전 2:26:48"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\SASM\\SASM.lnk",
+                "modified_time": "2022-05-27 오후 9:01:26",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 9:01:26",
+                        "end_time": "2022-05-27 오후 9:01:26"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Visual Studio 2019.lnk",
+                "modified_time": "2022-03-04 오후 10:48:43",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-04 오후 10:48:43",
+                        "end_time": "2022-03-04 오후 10:48:43"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\WAMP packaged by Bitnami\\WAMP packaged by Bitnami Manager Tool.lnk",
+                "modified_time": "2021-11-26 오전 12:47:27",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-26 오전 12:47:27",
+                        "end_time": "2021-11-26 오전 12:47:27"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Word.lnk",
+                "modified_time": "2022-12-14 오전 12:23:52",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-14 오전 12:23:52",
+                        "end_time": "2022-12-14 오전 12:23:52"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\Xshell 7\\Xshell.lnk",
+                "modified_time": "2022-11-17 오후 7:23:15",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-17 오후 7:23:15",
+                        "end_time": "2022-11-17 오후 7:23:15"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\카카오톡\\카카오톡.lnk",
+                "modified_time": "2022-12-11 오후 8:14:35",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-11 오후 8:14:35",
+                        "end_time": "2022-12-11 오후 8:14:35"
+                    }
+                ]
+            },
+            {
+                "name": "{0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8}\\한글 2018.lnk",
+                "modified_time": "2022-11-25 오후 8:56:58",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-25 오후 8:56:58",
+                        "end_time": "2022-11-25 오후 8:56:58"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\cmd.exe",
+                "modified_time": "2022-12-12 오후 8:40:34",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-12 오후 8:40:34",
+                        "end_time": "2022-12-12 오후 8:40:34"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\eventvwr.exe",
+                "modified_time": "2022-04-25 오전 3:12:09",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-04-25 오전 3:12:09",
+                        "end_time": "2022-04-25 오전 3:12:09"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\fontview.exe",
+                "modified_time": "2022-03-28 오후 8:13:47",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-28 오후 8:13:47",
+                        "end_time": "2022-03-28 오후 8:13:47"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\mmc.exe",
+                "modified_time": "2022-05-09 오전 1:38:19",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-09 오전 1:38:19",
+                        "end_time": "2022-05-09 오전 1:38:19"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\mspaint.exe",
+                "modified_time": "2022-05-18 오후 7:38:18",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-18 오후 7:38:18",
+                        "end_time": "2022-05-18 오후 7:38:18"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\notepad.exe",
+                "modified_time": "2022-12-13 오후 10:01:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:01:02",
+                        "end_time": "2022-12-13 오후 10:01:02"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\shutdown.exe",
+                "modified_time": "2021-11-30 오전 9:36:09",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-30 오전 9:36:09",
+                        "end_time": "2021-11-30 오전 9:36:09"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\SystemPropertiesAdvanced.exe",
+                "modified_time": "2022-12-13 오전 12:29:33",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오전 12:29:33",
+                        "end_time": "2022-12-13 오전 12:29:33"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\WF.msc",
+                "modified_time": "2022-05-21 오후 9:38:28",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-21 오후 9:38:28",
+                        "end_time": "2022-05-21 오후 9:38:28"
+                    }
+                ]
+            },
+            {
+                "name": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "modified_time": "2022-05-27 오후 9:23:19",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 9:23:19",
+                        "end_time": "2022-05-27 오후 9:23:19"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\010 Editor\\010Editor.exe",
+                "modified_time": "2022-05-16 오후 1:30:04",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-16 오후 1:30:04",
+                        "end_time": "2022-05-16 오후 1:30:04"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\7-Zip\\7zFM.exe",
+                "modified_time": "2022-05-27 오후 11:12:17",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 11:12:17",
+                        "end_time": "2022-05-27 오후 11:12:17"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\AccessData\\FTK Imager\\FTK Imager.exe",
+                "modified_time": "2022-05-27 오후 10:43:56",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 10:43:56",
+                        "end_time": "2022-05-27 오후 10:43:56"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Bandizip\\Bandizip.exe",
+                "modified_time": "2022-12-13 오전 10:48:50",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오전 10:48:50",
+                        "end_time": "2022-12-13 오전 10:48:50"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Common Files\\microsoft shared\\ink\\TabTip.exe",
+                "modified_time": "2022-05-30 오후 9:37:57",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-30 오후 9:37:57",
+                        "end_time": "2022-05-30 오후 9:37:57"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\DB Browser for SQLite\\DB Browser for SQLite.exe",
+                "modified_time": "2022-04-24 오후 8:38:47",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-04-24 오후 8:38:47",
+                        "end_time": "2022-04-24 오후 8:38:47"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\HxD\\HxD.exe",
+                "modified_time": "2022-05-28 오후 8:47:30",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-28 오후 8:47:30",
+                        "end_time": "2022-05-28 오후 8:47:30"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\MySQL\\MySQL Workbench 8.0\\MySQLWorkbench.exe",
+                "modified_time": "2022-10-25 오후 6:01:03",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-10-25 오후 6:01:03",
+                        "end_time": "2022-10-25 오후 6:01:03"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\obs-studio\\bin\\64bit\\obs64.exe",
+                "modified_time": "2022-10-21 오후 5:19:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-10-21 오후 5:19:49",
+                        "end_time": "2022-10-21 오후 5:19:49"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Sublime Text\\sublime_text.exe",
+                "modified_time": "2022-05-28 오전 3:34:41",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-28 오전 3:34:41",
+                        "end_time": "2022-05-28 오전 3:34:41"
+                    }
+                ]
+            },
+            {
+                "name": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Wireshark\\Wireshark.exe",
+                "modified_time": "2022-05-21 오후 10:36:48",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-21 오후 10:36:48",
+                        "end_time": "2022-05-21 오후 10:36:48"
+                    }
+                ]
+            },
+            {
+                "name": "{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\\ESTsoft\\ALCapture\\ALCapture.exe",
+                "modified_time": "2022-11-30 오후 6:08:16",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-30 오후 6:08:16",
+                        "end_time": "2022-11-30 오후 6:08:16"
+                    }
+                ]
+            },
+            {
+                "name": "{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\\Event Log Explorer\\elex.exe",
+                "modified_time": "2022-04-25 오전 3:16:19",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-04-25 오전 3:16:19",
+                        "end_time": "2022-04-25 오전 3:16:19"
+                    }
+                ]
+            },
+            {
+                "name": "{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\\Hnc\\Office 2018\\HOffice100\\Bin\\Hwp.exe",
+                "modified_time": "2022-12-14 오전 12:12:26",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-14 오전 12:12:26",
+                        "end_time": "2022-12-14 오전 12:12:26"
+                    }
+                ]
+            },
+            {
+                "name": "{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\\INCAInternet\\nProtect Online Security\\nos_launcher.exe",
+                "modified_time": "2021-12-24 오후 2:14:46",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-24 오후 2:14:46",
+                        "end_time": "2021-12-24 오후 2:14:46"
+                    }
+                ]
+            },
+            {
+                "name": "{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\\Kakao\\KakaoTalk\\KakaoTalk.exe",
+                "modified_time": "2022-12-11 오후 8:14:35",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-11 오후 8:14:35",
+                        "end_time": "2022-12-11 오후 8:14:35"
+                    }
+                ]
+            },
+            {
+                "name": "{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\\NetSarang\\Xshell 7\\Xshell.exe",
+                "modified_time": "2022-11-17 오후 7:23:15",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-17 오후 7:23:15",
+                        "end_time": "2022-11-17 오후 7:23:15"
+                    }
+                ]
+            },
+            {
+                "name": "{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\\SASM\\sasm.exe",
+                "modified_time": "2022-05-27 오후 9:01:26",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 9:01:26",
+                        "end_time": "2022-05-27 오후 9:01:26"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\Chrome.lnk",
+                "modified_time": "2022-12-17 오후 1:31:49",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-17 오후 1:31:49",
+                        "end_time": "2022-12-17 오후 1:31:49"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\Evernote.lnk",
+                "modified_time": "2022-01-22 오후 10:53:02",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-01-22 오후 10:53:02",
+                        "end_time": "2022-01-22 오후 10:53:02"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\File Explorer.lnk",
+                "modified_time": "2022-12-16 오후 8:28:43",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-16 오후 8:28:43",
+                        "end_time": "2022-12-16 오후 8:28:43"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\HxD.lnk",
+                "modified_time": "2022-05-28 오후 8:47:30",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-28 오후 8:47:30",
+                        "end_time": "2022-05-28 오후 8:47:30"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\JANDI.lnk",
+                "modified_time": "2022-06-30 오후 11:28:13",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-06-30 오후 11:28:13",
+                        "end_time": "2022-06-30 오후 11:28:13"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\Microsoft Edge.lnk",
+                "modified_time": "2022-12-13 오전 10:51:56",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오전 10:51:56",
+                        "end_time": "2022-12-13 오전 10:51:56"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\Notion.lnk",
+                "modified_time": "2022-12-13 오후 10:29:03",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:29:03",
+                        "end_time": "2022-12-13 오후 10:29:03"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\The Interactive Disassembler.lnk",
+                "modified_time": "2022-12-13 오후 10:34:35",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-13 오후 10:34:35",
+                        "end_time": "2022-12-13 오후 10:34:35"
+                    }
+                ]
+            },
+            {
+                "name": "{9E3995AB-1F9C-4F13-B827-48B24B6C7174}\\TaskBar\\알캡처.lnk",
+                "modified_time": "2022-11-30 오후 6:08:16",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-30 오후 6:08:16",
+                        "end_time": "2022-11-30 오후 6:08:16"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\Accessories\\Internet Explorer.lnk",
+                "modified_time": "2021-12-23 오후 2:02:16",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-12-23 오후 2:02:16",
+                        "end_time": "2021-12-23 오후 2:02:16"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\DBeaver Community\\DBeaver.lnk",
+                "modified_time": "2022-12-15 오후 9:17:17",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-15 오후 9:17:17",
+                        "end_time": "2022-12-15 오후 9:17:17"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\Discord Inc\\Discord.lnk",
+                "modified_time": "2022-11-06 오전 11:23:54",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-11-06 오전 11:23:54",
+                        "end_time": "2022-11-06 오전 11:23:54"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\JetBrains\\JetBrains dotPeek 2021.3.3.lnk",
+                "modified_time": "2022-03-06 오후 9:26:00",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-03-06 오후 9:26:00",
+                        "end_time": "2022-03-06 오후 9:26:00"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\Notion.lnk",
+                "modified_time": "2022-09-18 오후 6:17:36",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-09-18 오후 6:17:36",
+                        "end_time": "2022-09-18 오후 6:17:36"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\OP.GG.lnk",
+                "modified_time": "2022-06-02 오전 9:51:31",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-06-02 오전 9:51:31",
+                        "end_time": "2022-06-02 오전 9:51:31"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\System Tools\\Command Prompt.lnk",
+                "modified_time": "2022-12-12 오후 8:40:34",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-12 오후 8:40:34",
+                        "end_time": "2022-12-12 오후 8:40:34"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\System Tools\\Control Panel.lnk",
+                "modified_time": "2022-12-16 오후 8:43:10",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-12-16 오후 8:43:10",
+                        "end_time": "2022-12-16 오후 8:43:10"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\Visual Studio Code\\Visual Studio Code.lnk",
+                "modified_time": "2022-05-30 오후 9:39:41",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-30 오후 9:39:41",
+                        "end_time": "2022-05-30 오후 9:39:41"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\Windows PowerShell\\Windows PowerShell.lnk",
+                "modified_time": "2022-05-27 오후 9:23:19",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-27 오후 9:23:19",
+                        "end_time": "2022-05-27 오후 9:23:19"
+                    }
+                ]
+            },
+            {
+                "name": "{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}\\바탕화면 달력\\바탕화면 달력.lnk",
+                "modified_time": "2021-11-04 오전 10:05:26",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2021-11-04 오전 10:05:26",
+                        "end_time": "2021-11-04 오전 10:05:26"
+                    }
+                ]
+            },
+            {
+                "name": "{F38BF404-1D43-42F2-9305-67DE0B28FC23}\\regedit.exe",
+                "modified_time": "2022-05-02 오전 3:22:57",
+                "timeline_items": [
+                    {
+                        "name": "modified_time",
+                        "start_time": "2022-05-02 오전 3:22:57",
+                        "end_time": "2022-05-02 오전 3:22:57"
+                    }
+                ]
+            }
+        ]
+    }
+}

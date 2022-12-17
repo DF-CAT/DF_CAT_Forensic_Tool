@@ -1,0 +1,234 @@
+{
+    "version": "1.0.4",
+    "ART0003": {
+        "name": "E-mail_Attachments",
+        "isEvent": false,
+        "data": [
+            {
+                "name": "1606188391932-12.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:17:23",
+                "size": "1,134,766",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:17:23",
+                        "end_time": "2022-11-28 오후 8:17:23"
+                    }
+                ]
+            },
+            {
+                "name": "2018-12-24-23-16-07.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:14:57",
+                "size": "3,437,518",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:14:57",
+                        "end_time": "2022-11-28 오후 8:14:57"
+                    }
+                ]
+            },
+            {
+                "name": "2019-07-22-22-19-05.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:17:23",
+                "size": "3,432,254",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:17:23",
+                        "end_time": "2022-11-28 오후 8:17:23"
+                    }
+                ]
+            },
+            {
+                "name": "2019-07-27-21-47-04-040.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:12:08",
+                "size": "766,527",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:12:08",
+                        "end_time": "2022-11-28 오후 8:12:08"
+                    }
+                ]
+            },
+            {
+                "name": "2019-09-24-22-18-34-919.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:11:44",
+                "size": "1,807,474",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:11:44",
+                        "end_time": "2022-11-28 오후 8:11:44"
+                    }
+                ]
+            },
+            {
+                "name": "20210105_162340.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:17:23",
+                "size": "4,513,188",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:17:23",
+                        "end_time": "2022-11-28 오후 8:17:23"
+                    }
+                ]
+            },
+            {
+                "name": "2022-2 총무 감사 교육.pdf",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:13:51",
+                "size": "4,326,946",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:13:51",
+                        "end_time": "2022-11-28 오후 8:13:51"
+                    }
+                ]
+            },
+            {
+                "name": "20221128_153003.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:11:05",
+                "size": "539,489",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:11:05",
+                        "end_time": "2022-11-28 오후 8:11:05"
+                    }
+                ]
+            },
+            {
+                "name": "[별표 7] 관리대상유해물질의종류[제166조·제185조및제186조관련](산업보건기준에관한규칙).pdf",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:17:23",
+                "size": "93,156",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:17:23",
+                        "end_time": "2022-11-28 오후 8:17:23"
+                    }
+                ]
+            },
+            {
+                "name": "a000bb75b00a3396908f997612ae506b.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:17:23",
+                "size": "61,275",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:17:23",
+                        "end_time": "2022-11-28 오후 8:17:23"
+                    }
+                ]
+            },
+            {
+                "name": "IMG_20221112_213757_788.jpg",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:12:24",
+                "size": "127,928",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:12:24",
+                        "end_time": "2022-11-28 오후 8:12:24"
+                    }
+                ]
+            },
+            {
+                "name": "MSDS.pdf",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:14:16",
+                "size": "93,052",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:14:16",
+                        "end_time": "2022-11-28 오후 8:14:16"
+                    }
+                ]
+            },
+            {
+                "name": "보건복지부_카드뉴스_거리두기+단계별+기준+및+방역+조치.pdf",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:17:23",
+                "size": "634,619",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:17:23",
+                        "end_time": "2022-11-28 오후 8:17:23"
+                    }
+                ]
+            },
+            {
+                "name": "분석화학실험.PDF",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:13:45",
+                "size": "38,287",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:13:45",
+                        "end_time": "2022-11-28 오후 8:13:45"
+                    }
+                ]
+            },
+            {
+                "name": "수질오염물분석실험 1조 대장균군실험.pdf",
+                "from_email": "sebin06188@naver.com",
+                "to_email": "iklee0276@gmail.com",
+                "message_delivery_time": "2022-11-28 오후 8:13:07",
+                "size": "459,787",
+                "domain": "naver.com",
+                "timeline_items": [
+                    {
+                        "name": "message_delivery_time",
+                        "start_time": "2022-11-28 오후 8:13:07",
+                        "end_time": "2022-11-28 오후 8:13:07"
+                    }
+                ]
+            }
+        ]
+    }
+}
